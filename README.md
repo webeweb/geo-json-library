@@ -9,6 +9,8 @@ geo-json-library
 [![License](https://img.shields.io/packagist/l/webeweb/geo-json-library.svg?style=flat-square)](https://packagist.org/packages/webeweb/geo-json-library)
 [![composer.lock](https://img.shields.io/badge/.lock-uncommited-important.svg?style=flat-square)](https://packagist.org/packages/webeweb/geo-json-library)
 
+Integrate Geo JSON with your projects.
+
 > IMPORTANT NOTICE: This package is still under development. Any changes will be
 > done without prior notice to consumers of this package. Of course this code
 > will become stable at a certain point, but for now, use at your own risk.
