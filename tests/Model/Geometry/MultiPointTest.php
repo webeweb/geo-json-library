@@ -11,9 +11,10 @@
 
 namespace WBW\Library\GeoJSON\Tests\Model\Geometry;
 
-use WBW\Library\GeoJSON\Tests\AbstractTestCase;
 use WBW\Library\GeoJSON\Model\GeoJson;
 use WBW\Library\GeoJSON\Model\Geometry\MultiPoint;
+use WBW\Library\GeoJSON\Model\Geometry\Point;
+use WBW\Library\GeoJSON\Tests\AbstractTestCase;
 
 /**
  * Multi point test.
@@ -22,6 +23,22 @@ use WBW\Library\GeoJSON\Model\Geometry\MultiPoint;
  * @package WBW\Library\GeoJSON\Tests\Model\Geometry
  */
 class MultiPointTest extends AbstractTestCase {
+
+    /**
+     * Tests the addPoint() method.
+     *
+     * @return void
+     */
+    public function testAddPoint() {
+
+        // Set a Point mock.
+        $point = new Point();
+
+        $obj = new MultiPoint();
+
+        $obj->addPoint($point);
+        $this->assertSame($point, $obj->getPoints()[0]);
+    }
 
     /**
      * Tests the __construct() method.

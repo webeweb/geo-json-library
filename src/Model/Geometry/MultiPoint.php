@@ -27,4 +27,23 @@ class MultiPoint extends Geometry {
     public function __construct() {
         parent::__construct(self::TYPE_MULTIPOINT);
     }
+
+    /**
+     * Add a point.
+     *
+     * @param Point $point The point.
+     * @return MultiPoint Returns this multi point.
+     */
+    public function addPoint(Point $point) {
+        return $this->addGeometry($point);
+    }
+
+    /**
+     * Get the points.
+     *
+     * @return Point[] Returns the points.
+     */
+    public function getPoints() {
+        return $this->getGeometries();
+    }
 }
