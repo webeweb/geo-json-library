@@ -31,7 +31,7 @@ class TestGeometry extends Geometry {
     /**
      * {@inheritDoc}
      */
-    public function addGeometry(Geometry $geometry) {
+    public function addGeometry(Geometry $geometry = null) {
         return parent::addGeometry($geometry);
     }
 

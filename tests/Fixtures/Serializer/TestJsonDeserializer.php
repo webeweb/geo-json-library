@@ -24,6 +24,27 @@ class TestJsonDeserializer extends JsonDeserializer {
     /**
      * {@inheritDoc}
      */
+    public static function deserializeBoundingBox(array $data) {
+        return parent::deserializeBoundingBox($data);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public static function deserializeFeature(array $data) {
+        return parent::deserializeFeature($data);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public static function deserializeGeometry(array $data) {
+        return parent::deserializeGeometry($data);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public static function deserializeGeometryCollection(array $data) {
         return parent::deserializeGeometryCollection($data);
     }

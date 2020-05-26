@@ -31,10 +31,10 @@ class LineString extends Geometry {
     /**
      * Add a point.
      *
-     * @param Point $point The point.
+     * @param Point|null $point The point.
      * @return LineString Returns this line string.
      */
-    public function addPoint(Point $point) {
+    public function addPoint(Point $point = null) {
         return $this->addGeometry($point);
     }
 

@@ -31,10 +31,10 @@ class MultiPolygon extends Geometry {
     /**
      * Add a polygon.
      *
-     * @param Polygon $polygon The polygon.
+     * @param Polygon|null $polygon The polygon.
      * @return MultiPolygon Returns this multi polygon.
      */
-    public function addPolygon(Polygon $polygon) {
+    public function addPolygon(Polygon $polygon = null) {
         return $this->addGeometry($polygon);
     }
 

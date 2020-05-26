@@ -31,10 +31,10 @@ class MultiLineString extends Geometry {
     /**
      * Add a line string.
      *
-     * @param LineString $lineString The line string.
+     * @param LineString|null $lineString The line string.
      * @return MultiLineString Returns this multi line string.
      */
-    public function addLineString(LineString $lineString) {
+    public function addLineString(LineString $lineString = null) {
         return $this->addGeometry($lineString);
     }
 

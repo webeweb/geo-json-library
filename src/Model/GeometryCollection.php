@@ -29,10 +29,10 @@ class GeometryCollection extends Geometry {
     /**
      * Add a geometry.
      *
-     * @param Geometry $geometry The geometry.
+     * @param Geometry|null $geometry The geometry.
      * @return GeometryCollection Returns this geometry collection.
      */
-    public function addGeometry(Geometry $geometry) {
+    public function addGeometry(Geometry $geometry = null) {
         return parent::addGeometry($geometry);
     }
 

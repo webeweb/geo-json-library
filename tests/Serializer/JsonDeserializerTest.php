@@ -11,6 +11,10 @@
 
 namespace WBW\Library\GeoJSON\Tests\Serializer;
 
+use WBW\Library\GeoJSON\Model\BoundingBox;
+use WBW\Library\GeoJSON\Model\Feature;
+use WBW\Library\GeoJSON\Model\FeatureCollection;
+use WBW\Library\GeoJSON\Model\Geometry;
 use WBW\Library\GeoJSON\Model\Geometry\LineString;
 use WBW\Library\GeoJSON\Model\Geometry\MultiLineString;
 use WBW\Library\GeoJSON\Model\Geometry\MultiPoint;
@@ -18,7 +22,6 @@ use WBW\Library\GeoJSON\Model\Geometry\MultiPolygon;
 use WBW\Library\GeoJSON\Model\Geometry\Point;
 use WBW\Library\GeoJSON\Model\Geometry\Polygon;
 use WBW\Library\GeoJSON\Model\GeometryCollection;
-use WBW\Library\GeoJSON\Serializer\JsonDeserializer;
 use WBW\Library\GeoJSON\Tests\AbstractTestCase;
 use WBW\Library\GeoJSON\Tests\Fixtures\Serializer\TestJsonDeserializer;
 
@@ -31,6 +34,65 @@ use WBW\Library\GeoJSON\Tests\Fixtures\Serializer\TestJsonDeserializer;
 class JsonDeserializerTest extends AbstractTestCase {
 
     /**
+     * Tests the deserializeBoundingBox() method.
+     *
+     * @rteurn void
+     */
+    public function testDeserializeBoundingBox() {
+
+        // Set a JSON mock.
+        $json = file_get_contents(__DIR__ . "/JsonDeserializerTest.testDeserializeBoundingBox.json");
+        $data = json_decode($json, true);
+
+        $res = TestJsonDeserializer::deserializeBoundingBox($data["bbox"]);
+        $this->assertInstanceOf(BoundingBox::class, $res);
+
+        $this->assertEquals(-10.0, $res->getValues()[0]);
+        $this->assertEquals(-10.0, $res->getValues()[1]);
+        $this->assertEquals(10.0, $res->getValues()[2]);
+        $this->assertEquals(10.0, $res->getValues()[3]);
+    }
+
+    /**
+     * Tests the deserializeFeature() method.
+     *
+     * @rteurn void
+     */
+    public function testDeserializeFeature() {
+
+        // Set a JSON mock.
+        $json = file_get_contents(__DIR__ . "/JsonDeserializerTest.testDeserializeFeature.json");
+        $data = json_decode($json, true);
+
+        $res = TestJsonDeserializer::deserializeFeature($data);
+        $this->assertInstanceOf(Feature::class, $res);
+
+        $this->assertInstanceOf(Geometry::class, $res->getGeometry());
+        $this->assertNull($res->getProperties());
+    }
+
+    /**
+     * Tests the deserializeFeatureCollection() method.
+     *
+     * @rteurn void
+     */
+    public function testDeserializeFeatureCollection() {
+
+        // Set a JSON mock.
+        $json = file_get_contents(__DIR__ . "/JsonDeserializerTest.testDeserializeFeatureCollection.json");
+        $data = json_decode($json, true);
+
+        $res = TestJsonDeserializer::deserializeFeatureCollection($data);
+        $this->assertInstanceOf(FeatureCollection::class, $res);
+
+        $this->assertCount(3, $res->getFeatures());
+
+        $this->assertInstanceOf(Point::class, $res->getFeatures()[0]->getGeometry());
+        $this->assertInstanceOf(LineString::class, $res->getFeatures()[1]->getGeometry());
+        $this->assertInstanceOf(Polygon::class, $res->getFeatures()[2]->getGeometry());
+    }
+
+    /**
      * Tests the deserializeGeometry() method.
      *
      * @rteurn void
@@ -41,7 +103,7 @@ class JsonDeserializerTest extends AbstractTestCase {
         $json = file_get_contents(__DIR__ . "/JsonDeserializerTest.testDeserializeLineString.json");
         $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeGeometry($data);
+        $res = TestJsonDeserializer::deserializeGeometry($data);
         $this->assertInstanceOf(LineString::class, $res);
     }
 

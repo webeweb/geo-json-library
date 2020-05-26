@@ -22,39 +22,41 @@ use WBW\Library\GeoJSON\Model\Geometry;
 class Polygon extends Geometry {
 
     /**
-     * Exterior rings.
+     * Interior rings.
      *
      * @var Point[]
      */
-    private $exteriorRings;
+    private $interiorRings;
 
     /**
      * Constructor.
      */
     public function __construct() {
         parent::__construct(self::TYPE_POLYGON);
-        $this->setExteriorRings([]);
+        $this->setInteriorRings([]);
     }
 
     /**
      * Add an exterior ring.
      *
-     * @param Point $point The exterior ring.
+     * @param Point|null $exteriorRing The exterior ring.
      * @return Polygon Returns this polygon.
      */
-    public function addExteriorRing(Point $point) {
-        $this->exteriorRings[] = $point;
-        return $this;
+    public function addExteriorRing(Point $exteriorRing = null) {
+        return $this->addGeometry($exteriorRing);
     }
 
     /**
      * Add an interior ring.
      *
-     * @param Point $point The interior ring.
+     * @param Point|null $interiorRing The interior ring.
      * @return Polygon Returns this polygon.
      */
-    public function addInteriorRing(Point $point) {
-        return $this->addGeometry($point);
+    public function addInteriorRing(Point $interiorRing = null) {
+        if (null !== $interiorRing) {
+            $this->interiorRings[] = $interiorRing;
+        }
+        return $this;
     }
 
     /**
@@ -63,26 +65,26 @@ class Polygon extends Geometry {
      * @return Point[] Returns the exterior rings.
      */
     public function getExteriorRings() {
-        return $this->exteriorRings;
-    }
-
-    /**
-     * Get the interior rings.
-     *
-     * @return Point[] Returns the interior rings.
-     */
-    public function getInteriorRings() {
         return $this->getGeometries();
     }
 
     /**
-     * Set the exterior rings.
+     * Get the exterior rings.
      *
-     * @param Point[] $exteriorRings The exterior rings.
+     * @return Point[] Returns the exterior rings.
+     */
+    public function getInteriorRings() {
+        return $this->interiorRings;
+    }
+
+    /**
+     * Set the interior rings.
+     *
+     * @param Point[] $interiorRings The interior rings.
      * @return Polygon Returns this polygon.
      */
-    protected function setExteriorRings(array $exteriorRings) {
-        $this->exteriorRings = $exteriorRings;
+    protected function setInteriorRings(array $interiorRings) {
+        $this->interiorRings = $interiorRings;
         return $this;
     }
 }
