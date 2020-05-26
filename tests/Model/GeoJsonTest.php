@@ -11,9 +11,9 @@
 
 namespace WBW\Library\GeoJSON\Tests\Model;
 
+use WBW\Library\GeoJSON\Model\GeoJson;
 use WBW\Library\GeoJSON\Tests\AbstractTestCase;
 use WBW\Library\GeoJSON\Tests\Fixtures\Model\TestGeoJson;
-use WBW\Library\GeoJSON\Model\GeoJson;
 
 /**
  * Geo JSON test.
@@ -22,6 +22,26 @@ use WBW\Library\GeoJSON\Model\GeoJson;
  * @package WBW\Library\GeoJSON\Tests\Model
  */
 class GeoJsonTest extends AbstractTestCase {
+
+    /**
+     * Tests the enumTypes() method.
+     *
+     * @return void
+     */
+    public function testEnumTypes() {
+
+        $res = [
+            GeoJson::TYPE_POINT,
+            GeoJson::TYPE_MULTIPOINT,
+            GeoJson::TYPE_LINESTRING,
+            GeoJson::TYPE_MULTILINESTRING,
+            GeoJson::TYPE_POLYGON,
+            GeoJson::TYPE_MULTIPOLYGON,
+            GeoJson::TYPE_GEOMETRYCOLLECTION,
+        ];
+
+        $this->assertEquals($res, GeoJson::enumTypes());
+    }
 
     /**
      * Tests the __construct() method.
@@ -39,10 +59,10 @@ class GeoJsonTest extends AbstractTestCase {
         $this->assertEquals("GeometryCollection", GeoJson::TYPE_GEOMETRYCOLLECTION);
 
         $this->assertEquals("Feature", GeoJson::TYPE_FEATURE);
-        $this->assertEquals("FetaureCollection", GeoJson::TYPE_FEATURECOLLECTION);
+        $this->assertEquals("FeatureCollection", GeoJson::TYPE_FEATURECOLLECTION);
 
         $obj = new TestGeoJson("type");
 
-        $this->assert("type", $obj->getType());
+        $this->assertEquals("type", $obj->getType());
     }
 }

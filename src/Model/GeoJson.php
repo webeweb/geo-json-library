@@ -27,6 +27,13 @@ abstract class GeoJson {
     }
 
     /**
+     * Type "feature".
+     *
+     * @var string
+     */
+    const TYPE_FEATURE = "Feature";
+
+    /**
      * Type "feature collection".
      *
      * @var string
@@ -96,5 +103,22 @@ abstract class GeoJson {
      */
     protected function __construct($type) {
         $this->setType($type);
+    }
+
+    /**
+     * Enumerates the types.
+     *
+     * @return string[] Returns the types.
+     */
+    public static function enumTypes() {
+        return [
+            self::TYPE_POINT,
+            self::TYPE_MULTIPOINT,
+            self::TYPE_LINESTRING,
+            self::TYPE_MULTILINESTRING,
+            self::TYPE_POLYGON,
+            self::TYPE_MULTIPOLYGON,
+            self::TYPE_GEOMETRYCOLLECTION,
+        ];
     }
 }
