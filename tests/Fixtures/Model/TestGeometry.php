@@ -27,4 +27,18 @@ class TestGeometry extends Geometry {
     public function __construct() {
         parent::__construct("geometry");
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addGeometry(Geometry $geometry) {
+        return parent::addGeometry($geometry);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getGeometries() {
+        return parent::getGeometries();
+    }
 }

@@ -21,11 +21,11 @@ namespace WBW\Library\GeoJSON\Model;
 abstract class Geometry extends GeoJson {
 
     /**
-     * Coordinates.
+     * Geometries.
      *
-     * @var Position[]
+     * @var Geometry[]
      */
-    private $coordinates;
+    private $geometries;
 
     /**
      * Constructor.
@@ -34,37 +34,37 @@ abstract class Geometry extends GeoJson {
      */
     protected function __construct($type) {
         parent::__construct($type);
-        $this->setCoordinates([]);
+        $this->setGeometries([]);
     }
 
     /**
-     * Add a coordinate.
+     * Add a geometry.
      *
-     * @param Position $coordinate The coodinate.
+     * @param Geometry $geometry The geometry.
      * @return Geometry Returns this geometry.
      */
-    public function addCoordinate(Position $coordinate) {
-        $this->coordinates[] = $coordinate;
+    protected function addGeometry(Geometry $geometry) {
+        $this->geometries[] = $geometry;
         return $this;
     }
 
     /**
-     * Get the coordinates.
+     * Get the geometries.
      *
-     * @return Position[] Returns the coordinates.
+     * @return Geometry[] Returns the geometries.
      */
-    public function getCoordinates() {
-        return $this->coordinates;
+    protected function getGeometries() {
+        return $this->geometries;
     }
 
     /**
      * Set the positions.
      *
-     * @param Position[] $coordinates The coordinates.
+     * @param Geometry[] $geometries The geometries.
      * @return Geometry Returns this geometry.
      */
-    protected function setCoordinates(array $coordinates) {
-        $this->coordinates = $coordinates;
+    protected function setGeometries(array $geometries) {
+        $this->geometries = $geometries;
         return $this;
     }
 }

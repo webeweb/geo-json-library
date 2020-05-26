@@ -13,7 +13,6 @@ namespace WBW\Library\GeoJSON\Tests\Model;
 
 use WBW\Library\GeoJSON\Tests\AbstractTestCase;
 use WBW\Library\GeoJSON\Tests\Fixtures\Model\TestGeometry;
-use WBW\Library\GeoJSON\Model\Position;
 
 /**
  * Geometry test.
@@ -24,19 +23,19 @@ use WBW\Library\GeoJSON\Model\Position;
 class GeometryTest extends AbstractTestCase {
 
     /**
-     * Tests the addCoordinate() method.
+     * Tests the addGeometry() method.
      *
      * @return void
      */
-    public function testAddCoordinate() {
+    public function testAddGeometry() {
 
-        // Set a Coordinate mock.
-        $coordinate = new Position();
+        // Set a Geometry mock.
+        $geometry = new TestGeometry();
 
         $obj = new TestGeometry();
 
-        $obj->addCoordinate($coordinate);
-        $this->assertSame($coordinate, $obj->getCoordinates()[0]);
+        $obj->addGeometry($geometry);
+        $this->assertSame($geometry, $obj->getGeometries()[0]);
     }
 
     /**
@@ -48,6 +47,6 @@ class GeometryTest extends AbstractTestCase {
 
         $obj = new TestGeometry();
 
-        $this->assertEquals([], $obj->getCoordinates());
+        $this->assertEquals([], $obj->getGeometries());
     }
 }
