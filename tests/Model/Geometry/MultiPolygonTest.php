@@ -11,9 +11,10 @@
 
 namespace WBW\Library\GeoJSON\Tests\Model\Geometry;
 
+use PHPUnit\Framework\TestCase;
 use WBW\Library\GeoJSON\Model\GeoJson;
 use WBW\Library\GeoJSON\Model\Geometry\MultiPolygon;
-use PHPUnit\Framework\TestCase;
+use WBW\Library\GeoJSON\Model\Geometry\Polygon;
 
 /**
  * Multi polygon test.
@@ -22,6 +23,22 @@ use PHPUnit\Framework\TestCase;
  * @package WBW\Library\GeoJSON\Tests\Model\Geometry
  */
 class MultiPolygonTest extends TestCase {
+
+    /**
+     * Tests the addPolygon() method.
+     *
+     * @return void
+     */
+    public function testAddPolygon() {
+
+        // Set a Polygon mock.
+        $point = new Polygon();
+
+        $obj = new MultiPolygon();
+
+        $obj->addPolygon($point);
+        $this->assertSame($point, $obj->getPolygons()[0]);
+    }
 
     /**
      * Tests the __construct() method.

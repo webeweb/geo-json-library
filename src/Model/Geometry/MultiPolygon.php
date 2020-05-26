@@ -27,4 +27,23 @@ class MultiPolygon extends Geometry {
     public function __construct() {
         parent::__construct(self::TYPE_MULTIPOLYGON);
     }
+
+    /**
+     * Add a polygon.
+     *
+     * @param Polygon $polygon The polygon.
+     * @return MultiPolygon Returns this multi polygon.
+     */
+    public function addPolygon(Polygon $polygon) {
+        return $this->addGeometry($polygon);
+    }
+
+    /**
+     * Get the polygons.
+     *
+     * @return Polygon[] Returns the polygons.
+     */
+    public function getPolygons() {
+        return $this->getGeometries();
+    }
 }
