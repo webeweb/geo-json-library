@@ -11,9 +11,10 @@
 
 namespace WBW\Library\GeoJSON\Tests\Model\Geometry;
 
-use WBW\Library\GeoJSON\Tests\AbstractTestCase;
 use WBW\Library\GeoJSON\Model\GeoJson;
+use WBW\Library\GeoJSON\Model\Geometry\Point;
 use WBW\Library\GeoJSON\Model\Geometry\Polygon;
+use WBW\Library\GeoJSON\Tests\AbstractTestCase;
 
 /**
  * Polygon test.
@@ -22,6 +23,38 @@ use WBW\Library\GeoJSON\Model\Geometry\Polygon;
  * @package WBW\Library\GeoJSON\Tests\Model\Geometry
  */
 class PolygonTest extends AbstractTestCase {
+
+    /**
+     * Tests the addExteriorRing() method.
+     *
+     * @return void
+     */
+    public function testAddExteriorRing() {
+
+        // Set a Point mock.
+        $point = new Point();
+
+        $obj = new Polygon();
+
+        $obj->addExteriorRing($point);
+        $this->assertSame($point, $obj->getExteriorRings()[0]);
+    }
+
+    /**
+     * Tests the addInteriorRing() method.
+     *
+     * @return void
+     */
+    public function testAddInteriroRing() {
+
+        // Set a Point mock.
+        $point = new Point();
+
+        $obj = new Polygon();
+
+        $obj->addInteriorRing($point);
+        $this->assertSame($point, $obj->getInteriorRings()[0]);
+    }
 
     /**
      * Tests the __construct() method.
