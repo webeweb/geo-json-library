@@ -19,6 +19,8 @@ namespace WBW\Library\GeoJSON\Model;
  */
 class Feature extends GeoJson {
 
+    use BoundingBoxTrait;
+
     /**
      * Geometry.
      *

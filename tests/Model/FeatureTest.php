@@ -11,6 +11,7 @@
 
 namespace WBW\Library\GeoJSON\Tests\Model;
 
+use WBW\Library\GeoJSON\Model\BoundingBox;
 use WBW\Library\GeoJSON\Model\Feature;
 use WBW\Library\GeoJSON\Model\GeoJson;
 use WBW\Library\GeoJSON\Model\GeometryCollection;
@@ -67,6 +68,7 @@ class FeatureTest extends AbstractTestCase {
         $obj = new Feature();
 
         $this->assertEquals(GeoJson::TYPE_FEATURE, $obj->getType());
+        $this->assertNull($obj->getBoundingBox());
         $this->assertNull($obj->getGeometry());
         $this->assertNull($obj->getProperties());
     }
