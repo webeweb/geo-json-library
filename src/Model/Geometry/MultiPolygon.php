@@ -12,6 +12,7 @@
 namespace WBW\Library\GeoJSON\Model\Geometry;
 
 use WBW\Library\GeoJSON\Model\Geometry;
+use WBW\Library\GeoJSON\Serializer\JsonSerializer;
 
 /**
  * MultiPolygon.
@@ -45,5 +46,12 @@ class MultiPolygon extends Geometry {
      */
     public function getPolygons() {
         return $this->getGeometries();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return JsonSerializer::serializeMultiPolygon($this);
     }
 }

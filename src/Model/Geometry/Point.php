@@ -13,6 +13,7 @@ namespace WBW\Library\GeoJSON\Model\Geometry;
 
 use WBW\Library\GeoJSON\Model\Geometry;
 use WBW\Library\GeoJSON\Model\Position;
+use WBW\Library\GeoJSON\Serializer\JsonSerializer;
 
 /**
  * Point.
@@ -43,6 +44,13 @@ class Point extends Geometry {
      */
     public function getPosition() {
         return $this->position;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return JsonSerializer::serializePoint($this);
     }
 
     /**

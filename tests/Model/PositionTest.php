@@ -11,6 +11,7 @@
 
 namespace WBW\Library\GeoJSON\Tests\Model;
 
+use JsonSerializable;
 use WBW\Library\GeoJSON\Model\Position;
 use WBW\Library\GeoJSON\Tests\AbstractTestCase;
 
@@ -70,6 +71,7 @@ class PositionTest extends AbstractTestCase {
 
         $obj = new Position();
 
+        $this->assertInstanceOf(JsonSerializable::class, $obj);
         $this->assertNull($obj->getLongitude());
         $this->assertNull($obj->getLatitude());
         $this->assertNull($obj->getAltitude());

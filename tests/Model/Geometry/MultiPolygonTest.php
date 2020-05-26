@@ -11,6 +11,7 @@
 
 namespace WBW\Library\GeoJSON\Tests\Model\Geometry;
 
+use JsonSerializable;
 use PHPUnit\Framework\TestCase;
 use WBW\Library\GeoJSON\Model\GeoJson;
 use WBW\Library\GeoJSON\Model\Geometry\MultiPolygon;
@@ -49,6 +50,7 @@ class MultiPolygonTest extends TestCase {
 
         $obj = new MultiPolygon();
 
+        $this->assertInstanceOf(JsonSerializable::class, $obj);
         $this->assertEquals(GeoJson::TYPE_MULTIPOLYGON, $obj->getType());
     }
 }

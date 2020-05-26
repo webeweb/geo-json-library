@@ -11,6 +11,7 @@
 
 namespace WBW\Library\GeoJSON\Model;
 
+use JsonSerializable;
 use WBW\Library\Core\Model\Attribute\StringTypeTrait;
 
 /**
@@ -20,7 +21,7 @@ use WBW\Library\Core\Model\Attribute\StringTypeTrait;
  * @package WBW\Library\GeoJSON\Model
  * @abstract
  */
-abstract class GeoJson {
+abstract class GeoJson implements JsonSerializable {
 
     use StringTypeTrait {
         setType as private;

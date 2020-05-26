@@ -11,6 +11,7 @@
 
 namespace WBW\Library\GeoJSON\Tests\Model;
 
+use JsonSerializable;
 use WBW\Library\GeoJSON\Model\Properties;
 use WBW\Library\GeoJSON\Tests\AbstractTestCase;
 
@@ -44,6 +45,7 @@ class PropertiesTest extends AbstractTestCase {
 
         $obj = new Properties();
 
+        $this->assertInstanceOf(JsonSerializable::class, $obj);
         $this->assertEquals([], $obj->getProperties());
     }
 }

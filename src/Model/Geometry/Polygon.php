@@ -12,6 +12,7 @@
 namespace WBW\Library\GeoJSON\Model\Geometry;
 
 use WBW\Library\GeoJSON\Model\Geometry;
+use WBW\Library\GeoJSON\Serializer\JsonSerializer;
 
 /**
  * Polygon.
@@ -75,6 +76,13 @@ class Polygon extends Geometry {
      */
     public function getInteriorRings() {
         return $this->interiorRings;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return JsonSerializer::serializePolygon($this);
     }
 
     /**

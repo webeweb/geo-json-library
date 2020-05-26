@@ -11,6 +11,8 @@
 
 namespace WBW\Library\GeoJSON\Model;
 
+use WBW\Library\GeoJSON\Serializer\JsonSerializer;
+
 /**
  * Geometry collection.
  *
@@ -41,5 +43,12 @@ class GeometryCollection extends Geometry {
      */
     public function getGeometries() {
         return parent::getGeometries();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return JsonSerializer::serializeGeometryCollection($this);
     }
 }

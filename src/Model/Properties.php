@@ -11,13 +11,16 @@
 
 namespace WBW\Library\GeoJSON\Model;
 
+use JsonSerializable;
+use WBW\Library\GeoJSON\Serializer\JsonSerializer;
+
 /**
  * Properties.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\GeoJSON\Model
  */
-class Properties {
+class Properties implements JsonSerializable {
 
     /**
      * Properties.
@@ -52,6 +55,13 @@ class Properties {
      */
     public function getProperties() {
         return $this->properties;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return JsonSerializer::serializeProperties($this);
     }
 
     /**

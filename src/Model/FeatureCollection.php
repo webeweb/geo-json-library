@@ -11,6 +11,8 @@
 
 namespace WBW\Library\GeoJSON\Model;
 
+use WBW\Library\GeoJSON\Serializer\JsonSerializer;
+
 /**
  * Feature collection.
  *
@@ -54,6 +56,13 @@ class FeatureCollection extends GeoJson {
      */
     public function getFeatures() {
         return $this->features;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return JsonSerializer::serializeFeatureCollection($this);
     }
 
     /**

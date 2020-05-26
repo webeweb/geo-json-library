@@ -11,13 +11,16 @@
 
 namespace WBW\Library\GeoJSON\Model;
 
+use JsonSerializable;
+use WBW\Library\GeoJSON\Serializer\JsonSerializer;
+
 /**
  * Position.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\GeoJSON\Model
  */
-class Position {
+class Position implements JsonSerializable {
 
     /**
      * Altitude.
@@ -72,6 +75,13 @@ class Position {
      */
     public function getLongitude() {
         return $this->longitude;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return JsonSerializer::serializePosition($this);
     }
 
     /**

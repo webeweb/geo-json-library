@@ -11,6 +11,7 @@
 
 namespace WBW\Library\GeoJSON\Tests\Model\Geometry;
 
+use JsonSerializable;
 use WBW\Library\GeoJSON\Model\GeoJson;
 use WBW\Library\GeoJSON\Model\Geometry\LineString;
 use WBW\Library\GeoJSON\Model\Geometry\Point;
@@ -47,6 +48,7 @@ class LineStringTest extends AbstractTestCase {
 
         $obj = new LineString();
 
+        $this->assertInstanceOf(JsonSerializable::class, $obj);
         $this->assertEquals(GeoJson::TYPE_LINESTRING, $obj->getType());
     }
 }

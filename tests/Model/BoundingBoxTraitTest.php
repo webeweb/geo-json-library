@@ -12,7 +12,6 @@
 namespace WBW\Library\GeoJSON\Tests\Model;
 
 use WBW\Library\GeoJSON\Model\BoundingBox;
-use WBW\Library\GeoJSON\Model\Feature;
 use WBW\Library\GeoJSON\Tests\AbstractTestCase;
 use WBW\Library\GeoJSON\Tests\Fixtures\Model\TestBoundingBoxTrait;
 

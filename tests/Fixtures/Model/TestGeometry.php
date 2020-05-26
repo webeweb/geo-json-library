@@ -41,4 +41,11 @@ class TestGeometry extends Geometry {
     public function getGeometries() {
         return parent::getGeometries();
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return [];
+    }
 }

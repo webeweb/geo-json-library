@@ -11,6 +11,7 @@
 
 namespace WBW\Library\GeoJSON\Tests\Model\Geometry;
 
+use JsonSerializable;
 use WBW\Library\GeoJSON\Model\GeoJson;
 use WBW\Library\GeoJSON\Model\Geometry\MultiPoint;
 use WBW\Library\GeoJSON\Model\Geometry\Point;
@@ -49,6 +50,7 @@ class MultiPointTest extends AbstractTestCase {
 
         $obj = new MultiPoint();
 
+        $this->assertInstanceOf(JsonSerializable::class, $obj);
         $this->assertEquals(GeoJson::TYPE_MULTIPOINT, $obj->getType());
     }
 }

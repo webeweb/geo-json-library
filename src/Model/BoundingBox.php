@@ -11,13 +11,16 @@
 
 namespace WBW\Library\GeoJSON\Model;
 
+use JsonSerializable;
+use WBW\Library\GeoJSON\Serializer\JsonSerializer;
+
 /**
  * Bounding box.
  *
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\GeoJSON\Model
  */
-class BoundingBox {
+class BoundingBox implements JsonSerializable {
 
     /**
      * Values.
@@ -51,6 +54,13 @@ class BoundingBox {
      */
     public function getValues() {
         return $this->values;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return JsonSerializer::serializeBoundingBox($this);
     }
 
     /**

@@ -12,6 +12,7 @@
 namespace WBW\Library\GeoJSON\Model\Geometry;
 
 use WBW\Library\GeoJSON\Model\Geometry;
+use WBW\Library\GeoJSON\Serializer\JsonSerializer;
 
 /**
  * Multi line string.
@@ -45,5 +46,12 @@ class MultiLineString extends Geometry {
      */
     public function getLineStrings() {
         return $this->getGeometries();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return JsonSerializer::serializeMultiLineString($this);
     }
 }

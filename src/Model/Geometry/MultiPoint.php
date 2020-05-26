@@ -12,6 +12,7 @@
 namespace WBW\Library\GeoJSON\Model\Geometry;
 
 use WBW\Library\GeoJSON\Model\Geometry;
+use WBW\Library\GeoJSON\Serializer\JsonSerializer;
 
 /**
  * Multi point.
@@ -45,5 +46,12 @@ class MultiPoint extends Geometry {
      */
     public function getPoints() {
         return $this->getGeometries();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return JsonSerializer::serializeMultiPoint($this);
     }
 }

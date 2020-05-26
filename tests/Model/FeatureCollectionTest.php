@@ -11,6 +11,7 @@
 
 namespace WBW\Library\GeoJSON\Tests\Model;
 
+use JsonSerializable;
 use WBW\Library\GeoJSON\Model\Feature;
 use WBW\Library\GeoJSON\Model\FeatureCollection;
 use WBW\Library\GeoJSON\Model\GeoJson;
@@ -49,6 +50,7 @@ class FeatureCollectionTest extends AbstractTestCase {
 
         $obj = new FeatureCollection();
 
+        $this->assertInstanceOf(JsonSerializable::class, $obj);
         $this->assertEquals(GeoJson::TYPE_FEATURECOLLECTION, $obj->getType());
         $this->assertEquals([], $obj->getFeatures());
     }

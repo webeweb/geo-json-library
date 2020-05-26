@@ -12,6 +12,7 @@
 namespace WBW\Library\GeoJSON\Model\Geometry;
 
 use WBW\Library\GeoJSON\Model\Geometry;
+use WBW\Library\GeoJSON\Serializer\JsonSerializer;
 
 /**
  * Line string.
@@ -45,5 +46,12 @@ class LineString extends Geometry {
      */
     public function getPoints() {
         return $this->getGeometries();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return JsonSerializer::serializeLineString($this);
     }
 }

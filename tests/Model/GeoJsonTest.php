@@ -11,6 +11,7 @@
 
 namespace WBW\Library\GeoJSON\Tests\Model;
 
+use JsonSerializable;
 use WBW\Library\GeoJSON\Model\GeoJson;
 use WBW\Library\GeoJSON\Tests\AbstractTestCase;
 use WBW\Library\GeoJSON\Tests\Fixtures\Model\TestGeoJson;
@@ -63,6 +64,7 @@ class GeoJsonTest extends AbstractTestCase {
 
         $obj = new TestGeoJson("type");
 
+        $this->assertInstanceOf(JsonSerializable::class, $obj);
         $this->assertEquals("type", $obj->getType());
     }
 }

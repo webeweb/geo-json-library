@@ -11,6 +11,7 @@
 
 namespace WBW\Library\GeoJSON\Tests\Model;
 
+use JsonSerializable;
 use WBW\Library\GeoJSON\Model\BoundingBox;
 use WBW\Library\GeoJSON\Tests\AbstractTestCase;
 
@@ -44,6 +45,7 @@ class BoundingBoxTest extends AbstractTestCase {
 
         $obj = new BoundingBox();
 
+        $this->assertInstanceOf(JsonSerializable::class, $obj);
         $this->assertEquals([], $obj->getValues());
     }
 }
