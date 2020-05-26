@@ -27,4 +27,23 @@ class LineString extends Geometry {
     public function __construct() {
         parent::__construct(self::TYPE_LINESTRING);
     }
+
+    /**
+     * Add a point.
+     *
+     * @param Point $point The point.
+     * @return LineString Returns this line string.
+     */
+    public function addPoint(Point $point) {
+        return $this->addGeometry($point);
+    }
+
+    /**
+     * Get the points.
+     *
+     * @return Point[] Returns the points.
+     */
+    public function getPoints() {
+        return $this->getGeometries();
+    }
 }
