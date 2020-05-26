@@ -27,4 +27,23 @@ class MultiLineString extends Geometry {
     public function __construct() {
         parent::__construct(self::TYPE_MULTILINESTRING);
     }
+
+    /**
+     * Add a line string.
+     *
+     * @param LineString $lineString The line string.
+     * @return MultiLineString Returns this multi line string.
+     */
+    public function addLineString(LineString $lineString) {
+        return $this->addGeometry($lineString);
+    }
+
+    /**
+     * Get the line strings.
+     *
+     * @return LineString[] Returns the line strings.
+     */
+    public function getLineStrings() {
+        return $this->getGeometries();
+    }
 }

@@ -11,9 +11,10 @@
 
 namespace WBW\Library\GeoJSON\Tests\Model\Geometry;
 
-use WBW\Library\GeoJSON\Tests\AbstractTestCase;
 use WBW\Library\GeoJSON\Model\GeoJson;
+use WBW\Library\GeoJSON\Model\Geometry\LineString;
 use WBW\Library\GeoJSON\Model\Geometry\MultiLineString;
+use WBW\Library\GeoJSON\Tests\AbstractTestCase;
 
 /**
  * Multi line string test.
@@ -22,6 +23,22 @@ use WBW\Library\GeoJSON\Model\Geometry\MultiLineString;
  * @package WBW\Library\GeoJSON\Tests\Model\Geometry
  */
 class MultiLineStringTest extends AbstractTestCase {
+
+    /**
+     * Tests the addLineString() method.
+     *
+     * @return void
+     */
+    public function testAddPoint() {
+
+        // Set a Line string mock.
+        $lineString = new LineString();
+
+        $obj = new MultiLineString();
+
+        $obj->addLineString($lineString);
+        $this->assertSame($lineString, $obj->getLineStrings()[0]);
+    }
 
     /**
      * Tests the __construct() method.
