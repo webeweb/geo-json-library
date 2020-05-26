@@ -45,7 +45,7 @@ class PolygonTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddInteriroRing() {
+    public function testAddInteriorRing() {
 
         // Set a Point mock.
         $point = new Point();
