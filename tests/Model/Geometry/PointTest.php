@@ -11,9 +11,10 @@
 
 namespace WBW\Library\GeoJSON\Tests\Model\Geometry;
 
-use WBW\Library\GeoJSON\Tests\AbstractTestCase;
 use WBW\Library\GeoJSON\Model\GeoJson;
 use WBW\Library\GeoJSON\Model\Geometry\Point;
+use WBW\Library\GeoJSON\Model\Position;
+use WBW\Library\GeoJSON\Tests\AbstractTestCase;
 
 /**
  * Point test.
@@ -22,6 +23,22 @@ use WBW\Library\GeoJSON\Model\Geometry\Point;
  * @package WBW\Library\GeoJSON\Tests\Model\Geometry
  */
 class PointTest extends AbstractTestCase {
+
+    /**
+     * Tests the setPosition() method.
+     *
+     * @retrun void
+     */
+    public function testSetPosition() {
+
+        // Set a Position mock.
+        $position = new Position();
+
+        $obj = new Point();
+
+        $obj->setPosition($position);
+        $this->assertSame($position, $obj->getPosition());
+    }
 
     /**
      * Tests the __construct() method.
