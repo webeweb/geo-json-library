@@ -99,7 +99,7 @@ abstract class GeoJson {
     /**
      * Constructor.
      *
-     * @param $type
+     * @param string $type The type.
      */
     protected function __construct($type) {
         $this->setType($type);
