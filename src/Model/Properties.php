@@ -12,6 +12,7 @@
 namespace WBW\Library\GeoJSON\Model;
 
 use JsonSerializable;
+use WBW\Library\Core\Argument\Helper\ArrayHelper;
 use WBW\Library\GeoJSON\Serializer\JsonSerializer;
 
 /**
@@ -55,6 +56,16 @@ class Properties implements JsonSerializable {
      */
     public function getProperties() {
         return $this->properties;
+    }
+
+    /**
+     * Get a property.
+     *
+     * @param string $k The key.
+     * @return mixed|null Returns the property in case of success, null otherwise.
+     */
+    public function getProperty($k) {
+        return ArrayHelper::get($this->properties, $k);
     }
 
     /**

@@ -34,6 +34,9 @@ class PropertiesTest extends AbstractTestCase {
 
         $obj->addProperty("k", "v");
         $this->assertEquals(["k" => "v"], $obj->getProperties());
+
+        $this->assertEquals("v", $obj->getProperty("k"));
+        $this->assertNull($obj->getProperty("exception"));
     }
 
     /**
