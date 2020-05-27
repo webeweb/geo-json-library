@@ -42,6 +42,22 @@ class FeatureCollectionTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the addForeignMember() method.
+     *
+     * @return void
+     */
+    public function testAddForeignMember() {
+
+        $obj = new FeatureCollection();
+
+        $obj->addForeignMember("k", "v");
+        $this->assertEquals(["k" => "v"], $obj->getForeignMembers());
+
+        $this->assertEquals("v", $obj->getForeignMember("k"));
+        $this->assertNull($obj->getForeignMember("exception"));
+    }
+
+    /**
      * Tests the __construct() method.
      *
      * @return void
@@ -53,5 +69,6 @@ class FeatureCollectionTest extends AbstractTestCase {
         $this->assertInstanceOf(JsonSerializable::class, $obj);
         $this->assertEquals(GeoJson::TYPE_FEATURECOLLECTION, $obj->getType());
         $this->assertEquals([], $obj->getFeatures());
+        $this->assertEquals([], $obj->getForeignMembers());
     }
 }
