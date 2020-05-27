@@ -82,11 +82,14 @@ class JsonSerializer {
      * @return array Returns the serialized feature collection.
      */
     public static function serializeFeatureCollection(FeatureCollection $model) {
-        return [
+
+        $result = [
             "type"     => $model->getType(),
             "bbox"     => static::serializeModel($model->getBoundingBox()),
             "features" => static::serializeArray($model->getFeatures()),
         ];
+
+        return array_merge($result, $model->getForeignMembers());
     }
 
     /**

@@ -77,13 +77,15 @@ class JsonSerializerTest extends AbstractTestCase {
         $obj = new FeatureCollection();
         $obj->setBoundingBox(new BoundingBox());
         $obj->addFeature(new Feature());
+        $obj->addForeignMember("k", "v");
 
         $res = $obj->jsonSerialize();
-        $this->assertCount(3, $res);
+        $this->assertCount(4, $res);
 
         $this->assertArrayHasKey("type", $res);
         $this->assertArrayHasKey("bbox", $res);
         $this->assertArrayHasKey("features", $res);
+        $this->assertArrayHasKey("k", $res);
     }
 
     /**
