@@ -93,6 +93,31 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeFeatureCollection() method.
+     *
+     * @rteurn void
+     */
+    public function testDeserializeFeatureCollectionWithMalformedData() {
+
+        // Set a JSON mock.
+        $json = file_get_contents(__DIR__ . "/JsonDeserializerTest.testDeserializeFeatureCollectionWithMalformedData.json");
+        $data = json_decode($json, true);
+
+        $res = TestJsonDeserializer::deserializeFeatureCollection($data);
+        $this->assertInstanceOf(FeatureCollection::class, $res);
+
+        $this->assertCount(7, $res->getFeatures());
+
+        $this->assertNull($res->getFeatures()[0]->getGeometry());
+        $this->assertNull($res->getFeatures()[1]->getGeometry());
+        $this->assertNull($res->getFeatures()[2]->getGeometry());
+        $this->assertNull($res->getFeatures()[3]->getGeometry());
+        $this->assertNull($res->getFeatures()[4]->getGeometry());
+        $this->assertNull($res->getFeatures()[5]->getGeometry());
+        $this->assertNull($res->getFeatures()[6]->getGeometry());
+    }
+
+    /**
      * Tests the deserializeGeometry() method.
      *
      * @rteurn void

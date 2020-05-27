@@ -59,9 +59,13 @@ class JsonDeserializer {
      * Deserializes a feature.
      *
      * @param array $data The data.
-     * @return Feature Returns the feature.
+     * @return Feature|null Returns the feature in case of success, null otherwise.
      */
     protected static function deserializeFeature(array $data) {
+
+        if (GeoJson::TYPE_FEATURE !== ArrayHelper::get($data, "type")) {
+            return null;
+        }
 
         $model = new Feature();
         $model->setBoundingBox(static::deserializeBoundingBox(ArrayHelper::get($data, "bbox", [])));
@@ -81,8 +85,16 @@ class JsonDeserializer {
 
         $model = new FeatureCollection();
         $model->setBoundingBox(static::deserializeBoundingBox(ArrayHelper::get($data, "bbox", [])));
+
         foreach (ArrayHelper::get($data, "features", []) as $current) {
             $model->addFeature(static::deserializeFeature($current));
+        }
+
+        foreach ($data as $k => $v) {
+            if (true === in_array($k, ["type", "bbox", "features"])) {
+                continue;
+            }
+            $model->addForeignMember($k, $v);
         }
 
         return $model;
@@ -132,7 +144,7 @@ class JsonDeserializer {
      * Deserializes a line string.
      *
      * @param array $data The data.
-     * @return LineString Returns the line string.
+     * @return LineString|null Returns the line string in case of success, null otherwise.
      */
     protected static function deserializeLineString(array $data) {
 
@@ -168,10 +180,6 @@ class JsonDeserializer {
      */
     protected static function deserializeMultiPoint(array $data) {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new MultiPoint();
         foreach ($data[0] as $current) {
             $model->addPoint(static::deserializePoint($current));
@@ -203,10 +211,6 @@ class JsonDeserializer {
      * @return Point|null Returns the point in case of success, null otherwise.
      */
     protected static function deserializePoint(array $data) {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new Point();
         $model->setPosition(static::deserializePosition($data));
