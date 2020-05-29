@@ -67,7 +67,7 @@ class BoundingBox implements JsonSerializable {
      * Set the values.
      *
      * @param float[] $values The values.
-     * @retufn BoundingBox Returns this bounding box.
+     * @return BoundingBox Returns this bounding box.
      */
     protected function setValues(array $values) {
         $this->values = $values;
