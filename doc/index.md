@@ -25,8 +25,7 @@ foreach($features as $current) {
 }
 ```
 
-1° Point
----
+1) Point
 
 ```php
 /** @var Point $geometry */
@@ -35,8 +34,7 @@ $geometry->getPosition()->getLatitude();
 $geometry->getPosition()->getAltitude();
 ```
 
-2° MultiPoint
----
+2) MultiPoint
 
 ```php
 /** @var MultiPoint $geometry */
@@ -49,8 +47,7 @@ foreach($geometry->getPoints() as $current) {
 }
 ```
 
-3° LineString
----
+3) LineString
 
 ```php
 /** @var LineString $geometry */
@@ -63,8 +60,7 @@ foreach($geometry->getPoints() as $current) {
 }
 ```
 
-4° MultiLineString
----
+4) MultiLineString
 
 ```php
 /** @var MultiLineString $geometry */
@@ -80,8 +76,7 @@ foreach($geometry->getLineStrings() as $current) {
 }
 ```
 
-5° Polygon
----
+5) Polygon
 
 ```php
 /** @var Polygon $geometry */
@@ -102,8 +97,7 @@ foreach($geometry->getInteriorRings() as $current) {
 }
 ```
 
-6° MultiPolygon
----
+6) MultiPolygon
 
 ```php
 /** @var MultiPolygon $geometry */
@@ -120,8 +114,7 @@ foreach($geometry->getPolygons() as $current) {
 }
 ```
 
-7° GeometryCollection
----
+7) GeometryCollection
 
 ```php
 /** @var GeometryCollection $geometry */
