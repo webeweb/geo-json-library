@@ -50,5 +50,6 @@ class LineStringTest extends AbstractTestCase {
 
         $this->assertInstanceOf(JsonSerializable::class, $obj);
         $this->assertEquals(GeoJson::TYPE_LINESTRING, $obj->getType());
+        $this->assertEquals([], $obj->getPoints());
     }
 }

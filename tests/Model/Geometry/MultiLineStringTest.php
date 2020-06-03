@@ -52,5 +52,6 @@ class MultiLineStringTest extends AbstractTestCase {
 
         $this->assertInstanceOf(JsonSerializable::class, $obj);
         $this->assertEquals(GeoJson::TYPE_MULTILINESTRING, $obj->getType());
+        $this->assertEquals([], $obj->getLineStrings());
     }
 }

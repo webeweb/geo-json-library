@@ -50,5 +50,6 @@ class PointTest extends AbstractTestCase {
 
         $this->assertInstanceOf(JsonSerializable::class, $obj);
         $this->assertEquals(GeoJson::TYPE_POINT, $obj->getType());
+        $this->assertNull($obj->getPosition());
     }
 }

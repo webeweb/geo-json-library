@@ -52,5 +52,6 @@ class MultiPolygonTest extends TestCase {
 
         $this->assertInstanceOf(JsonSerializable::class, $obj);
         $this->assertEquals(GeoJson::TYPE_MULTIPOLYGON, $obj->getType());
+        $this->assertEquals([], $obj->getPolygons());
     }
 }
