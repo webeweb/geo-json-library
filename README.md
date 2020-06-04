@@ -11,6 +11,9 @@ geo-json-library
 
 Integrate Geo JSON with your projects.
 
+`geo-json-library` includes classes for each data structure defined in the
+[GeoJSON specification](https://github.com/webeweb/geo-json-library/blob/master/doc/RFC7946.pdf).
+
 If you like this package, pay me a beer (or a coffee)
 [![paypal.me](https://img.shields.io/badge/paypal.me-webeweb-0070ba.svg?style=flat-square&logo=paypal)](https://www.paypal.me/webeweb)
 
