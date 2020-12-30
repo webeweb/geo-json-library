@@ -35,7 +35,7 @@ class MultiPolygon extends Geometry {
      * @param Polygon|null $polygon The polygon.
      * @return MultiPolygon Returns this multi polygon.
      */
-    public function addPolygon(Polygon $polygon = null) {
+    public function addPolygon(?Polygon $polygon): MultiPolygon {
         return $this->addGeometry($polygon);
     }
 
@@ -44,14 +44,14 @@ class MultiPolygon extends Geometry {
      *
      * @return Polygon[] Returns the polygons.
      */
-    public function getPolygons() {
+    public function getPolygons(): array {
         return $this->getGeometries();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeMultiPolygon($this);
     }
 }

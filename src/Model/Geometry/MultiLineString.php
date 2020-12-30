@@ -35,7 +35,7 @@ class MultiLineString extends Geometry {
      * @param LineString|null $lineString The line string.
      * @return MultiLineString Returns this multi line string.
      */
-    public function addLineString(LineString $lineString = null) {
+    public function addLineString(?LineString $lineString): MultiLineString {
         return $this->addGeometry($lineString);
     }
 
@@ -44,14 +44,14 @@ class MultiLineString extends Geometry {
      *
      * @return LineString[] Returns the line strings.
      */
-    public function getLineStrings() {
+    public function getLineStrings(): array {
         return $this->getGeometries();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeMultiLineString($this);
     }
 }

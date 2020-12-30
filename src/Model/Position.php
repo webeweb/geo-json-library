@@ -25,21 +25,21 @@ class Position implements JsonSerializable {
     /**
      * Altitude.
      *
-     * @var float
+     * @var float|null
      */
     private $altitude;
 
     /**
      * Latitude.
      *
-     * @var float
+     * @var float|null
      */
     private $latitude;
 
     /**
      * Longitude.
      *
-     * @var float
+     * @var float|null
      */
     private $longitude;
 
@@ -53,44 +53,44 @@ class Position implements JsonSerializable {
     /**
      * Get the altitude.
      *
-     * @return float Returns the altitude.
+     * @return float|null Returns the altitude.
      */
-    public function getAltitude() {
+    public function getAltitude(): ?float {
         return $this->altitude;
     }
 
     /**
      * Get the latitude.
      *
-     * @return float Returns the latitude.
+     * @return float|null Returns the latitude.
      */
-    public function getLatitude() {
+    public function getLatitude(): ?float {
         return $this->latitude;
     }
 
     /**
      * Get the longitude.
      *
-     * @return float Returns the longitude.
+     * @return float|null Returns the longitude.
      */
-    public function getLongitude() {
+    public function getLongitude(): ?float {
         return $this->longitude;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializePosition($this);
     }
 
     /**
      * Set the altitude.
      *
-     * @param float $altitude The altitude.
+     * @param float|null $altitude The altitude.
      * @return Position Returns this position.
      */
-    public function setAltitude($altitude) {
+    public function setAltitude(?float $altitude): Position {
         $this->altitude = $altitude;
         return $this;
     }
@@ -98,10 +98,10 @@ class Position implements JsonSerializable {
     /**
      * Set the latitude.
      *
-     * @param float $latitude The latitude.
+     * @param float|null $latitude The latitude.
      * @return Position Returns this position.
      */
-    public function setLatitude($latitude) {
+    public function setLatitude(?float $latitude): Position {
         $this->latitude = $latitude;
         return $this;
     }
@@ -109,10 +109,10 @@ class Position implements JsonSerializable {
     /**
      * Set the longitude.
      *
-     * @param float $longitude The longitude.
+     * @param float|null $longitude The longitude.
      * @return Position Returns this position.
      */
-    public function setLongitude($longitude) {
+    public function setLongitude(?float $longitude): Position {
         $this->longitude = $longitude;
         return $this;
     }

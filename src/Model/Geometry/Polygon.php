@@ -43,7 +43,7 @@ class Polygon extends Geometry {
      * @param Point|null $exteriorRing The exterior ring.
      * @return Polygon Returns this polygon.
      */
-    public function addExteriorRing(Point $exteriorRing = null) {
+    public function addExteriorRing(?Point $exteriorRing): Polygon {
         return $this->addGeometry($exteriorRing);
     }
 
@@ -53,7 +53,7 @@ class Polygon extends Geometry {
      * @param Point|null $interiorRing The interior ring.
      * @return Polygon Returns this polygon.
      */
-    public function addInteriorRing(Point $interiorRing = null) {
+    public function addInteriorRing(?Point $interiorRing): Polygon {
         if (null !== $interiorRing) {
             $this->interiorRings[] = $interiorRing;
         }
@@ -65,7 +65,7 @@ class Polygon extends Geometry {
      *
      * @return Point[] Returns the exterior rings.
      */
-    public function getExteriorRings() {
+    public function getExteriorRings(): array {
         return $this->getGeometries();
     }
 
@@ -74,14 +74,14 @@ class Polygon extends Geometry {
      *
      * @return Point[] Returns the exterior rings.
      */
-    public function getInteriorRings() {
+    public function getInteriorRings(): array {
         return $this->interiorRings;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializePolygon($this);
     }
 
@@ -91,7 +91,7 @@ class Polygon extends Geometry {
      * @param Point[] $interiorRings The interior rings.
      * @return Polygon Returns this polygon.
      */
-    protected function setInteriorRings(array $interiorRings) {
+    protected function setInteriorRings(array $interiorRings): Polygon {
         $this->interiorRings = $interiorRings;
         return $this;
     }

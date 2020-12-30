@@ -41,7 +41,7 @@ class JsonDeserializer {
      * @param array $data The data.
      * @return BoundingBox|null Returns the bounding box in case of success, null otherwise.
      */
-    protected static function deserializeBoundingBox(array $data) {
+    protected static function deserializeBoundingBox(array $data): ?BoundingBox {
 
         if (0 === count($data)) {
             return null;
@@ -61,7 +61,7 @@ class JsonDeserializer {
      * @param array $data The data.
      * @return Feature|null Returns the feature in case of success, null otherwise.
      */
-    protected static function deserializeFeature(array $data) {
+    protected static function deserializeFeature(array $data): ?Feature {
 
         if (GeoJson::TYPE_FEATURE !== ArrayHelper::get($data, "type")) {
             return null;
@@ -81,7 +81,7 @@ class JsonDeserializer {
      * @param array $data The data.
      * @return FeatureCollection Returns the feature collection.
      */
-    public static function deserializeFeatureCollection(array $data) {
+    public static function deserializeFeatureCollection(array $data): FeatureCollection {
 
         $model = new FeatureCollection();
         $model->setBoundingBox(static::deserializeBoundingBox(ArrayHelper::get($data, "bbox", [])));
@@ -106,7 +106,7 @@ class JsonDeserializer {
      * @param array $data The data.
      * @return Geometry|null Returns the geometry in case of success, null otherwise.
      */
-    protected static function deserializeGeometry(array $data) {
+    protected static function deserializeGeometry(array $data): ?Geometry {
 
         $type = ArrayHelper::get($data, "type");
         if (false === in_array($type, GeoJson::enumTypes())) {
@@ -130,7 +130,7 @@ class JsonDeserializer {
      * @param array $data The data.
      * @return GeometryCollection Returns the geometry collection.
      */
-    protected static function deserializeGeometryCollection(array $data) {
+    protected static function deserializeGeometryCollection(array $data): GeometryCollection {
 
         $model = new GeometryCollection();
         foreach ($data as $current) {
@@ -146,7 +146,7 @@ class JsonDeserializer {
      * @param array $data The data.
      * @return LineString|null Returns the line string in case of success, null otherwise.
      */
-    protected static function deserializeLineString(array $data) {
+    protected static function deserializeLineString(array $data): ?LineString {
 
         $model = new LineString();
         foreach ($data as $current) {
@@ -162,7 +162,7 @@ class JsonDeserializer {
      * @param array $data The data.
      * @return MultiLineString Returns the multi line string.
      */
-    protected static function deserializeMultiLineString(array $data) {
+    protected static function deserializeMultiLineString(array $data): MultiLineString {
 
         $model = new MultiLineString();
         foreach ($data as $current) {
@@ -178,7 +178,7 @@ class JsonDeserializer {
      * @param array $data The data.
      * @return MultiPoint|null Returns the multi point in case of success, null otherwise.
      */
-    protected static function deserializeMultiPoint(array $data) {
+    protected static function deserializeMultiPoint(array $data): ?MultiPoint {
 
         $model = new MultiPoint();
         foreach ($data[0] as $current) {
@@ -194,7 +194,7 @@ class JsonDeserializer {
      * @param array $data The data.
      * @return MultiPolygon Returns the multi polygon.
      */
-    protected static function deserializeMultiPolygon(array $data) {
+    protected static function deserializeMultiPolygon(array $data): MultiPolygon {
 
         $model = new MultiPolygon();
         foreach ($data as $current) {
@@ -210,7 +210,7 @@ class JsonDeserializer {
      * @param array $data The data.
      * @return Point|null Returns the point in case of success, null otherwise.
      */
-    protected static function deserializePoint(array $data) {
+    protected static function deserializePoint(array $data): ?Point {
 
         $model = new Point();
         $model->setPosition(static::deserializePosition($data));
@@ -224,7 +224,7 @@ class JsonDeserializer {
      * @param array $data The data.
      * @return Polygon|null Returns the polygon in case of success, null otherwise.
      */
-    protected static function deserializePolygon(array $data) {
+    protected static function deserializePolygon(array $data): ?Polygon {
 
         $nb = count($data);
         if (0 === $nb) {
@@ -253,7 +253,7 @@ class JsonDeserializer {
      * @param array $data The data.
      * @return Position|null Returns the position in case of success, null otherwise.
      */
-    protected static function deserializePosition(array $data) {
+    protected static function deserializePosition(array $data): ?Position {
 
         $nb = count($data);
         if ($nb < 2) {
@@ -274,7 +274,7 @@ class JsonDeserializer {
      * @param array $data The data.
      * @return Properties|null Returns the properties in case of success, null otherwise.
      */
-    protected static function deserializeProperties(array $data) {
+    protected static function deserializeProperties(array $data): ?Properties {
 
         if (0 === count($data)) {
             return null;

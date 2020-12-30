@@ -24,16 +24,16 @@ class TestGeoJson extends GeoJson {
     /**
      * Constructor.
      *
-     * @param $type
+     * @param string $type
      */
-    public function __construct($type) {
+    public function __construct(string $type) {
         parent::__construct($type);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return [];
     }
 }

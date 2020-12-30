@@ -28,7 +28,7 @@ class BoundingBoxTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddValue() {
+    public function testAddValue(): void {
 
         $obj = new BoundingBox();
 
@@ -41,7 +41,7 @@ class BoundingBoxTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new BoundingBox();
 

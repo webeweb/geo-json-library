@@ -32,7 +32,7 @@ abstract class Geometry extends GeoJson {
      *
      * @param string $type The type.
      */
-    protected function __construct($type) {
+    protected function __construct(string $type) {
         parent::__construct($type);
         $this->setGeometries([]);
     }
@@ -43,7 +43,7 @@ abstract class Geometry extends GeoJson {
      * @param Geometry|null $geometry The geometry.
      * @return Geometry Returns this geometry.
      */
-    protected function addGeometry(Geometry $geometry = null) {
+    protected function addGeometry(?Geometry $geometry): Geometry {
         if (null !== $geometry) {
             $this->geometries[] = $geometry;
         }
@@ -55,7 +55,7 @@ abstract class Geometry extends GeoJson {
      *
      * @return Geometry[] Returns the geometries.
      */
-    protected function getGeometries() {
+    protected function getGeometries(): array {
         return $this->geometries;
     }
 
@@ -65,7 +65,7 @@ abstract class Geometry extends GeoJson {
      * @param Geometry[] $geometries The geometries.
      * @return Geometry Returns this geometry.
      */
-    protected function setGeometries(array $geometries) {
+    protected function setGeometries(array $geometries): Geometry {
         $this->geometries = $geometries;
         return $this;
     }

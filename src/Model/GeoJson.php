@@ -102,7 +102,7 @@ abstract class GeoJson implements JsonSerializable {
      *
      * @param string $type The type.
      */
-    protected function __construct($type) {
+    protected function __construct(string $type) {
         $this->setType($type);
     }
 
@@ -111,7 +111,7 @@ abstract class GeoJson implements JsonSerializable {
      *
      * @return string[] Returns the types.
      */
-    public static function enumTypes() {
+    public static function enumTypes(): array {
         return [
             self::TYPE_POINT,
             self::TYPE_MULTIPOINT,

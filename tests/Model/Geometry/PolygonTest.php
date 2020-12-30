@@ -30,7 +30,7 @@ class PolygonTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddExteriorRing() {
+    public function testAddExteriorRing(): void {
 
         // Set a Point mock.
         $point = new Point();
@@ -46,7 +46,7 @@ class PolygonTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddInteriorRing() {
+    public function testAddInteriorRing(): void {
 
         // Set a Point mock.
         $point = new Point();
@@ -62,7 +62,7 @@ class PolygonTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new Polygon();
 

@@ -30,7 +30,7 @@ class FeatureCollectionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddFeature() {
+    public function testAddFeature(): void {
 
         // Set a Feature mock.
         $feature = new Feature();
@@ -46,7 +46,7 @@ class FeatureCollectionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddForeignMember() {
+    public function testAddForeignMember(): void {
 
         $obj = new FeatureCollection();
 
@@ -62,7 +62,7 @@ class FeatureCollectionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new FeatureCollection();
 

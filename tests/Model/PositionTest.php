@@ -28,7 +28,7 @@ class PositionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetAltitude() {
+    public function testSetAltitude(): void {
 
         $obj = new Position();
 
@@ -41,7 +41,7 @@ class PositionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetLatitude() {
+    public function testSetLatitude(): void {
 
         $obj = new Position();
 
@@ -54,7 +54,7 @@ class PositionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetLongitude() {
+    public function testSetLongitude(): void {
 
         $obj = new Position();
 
@@ -67,7 +67,7 @@ class PositionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new Position();
 

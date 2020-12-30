@@ -30,7 +30,7 @@ class MultiPolygonTest extends TestCase {
      *
      * @return void
      */
-    public function testAddPolygon() {
+    public function testAddPolygon(): void {
 
         // Set a Polygon mock.
         $point = new Polygon();
@@ -46,7 +46,7 @@ class MultiPolygonTest extends TestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new MultiPolygon();
 

@@ -31,21 +31,21 @@ class TestGeometry extends Geometry {
     /**
      * {@inheritDoc}
      */
-    public function addGeometry(Geometry $geometry = null) {
+    public function addGeometry(?Geometry $geometry): Geometry {
         return parent::addGeometry($geometry);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getGeometries() {
+    public function getGeometries(): array {
         return parent::getGeometries();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return [];
     }
 }

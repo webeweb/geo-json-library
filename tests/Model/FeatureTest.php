@@ -31,7 +31,7 @@ class FeatureTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetGeometry() {
+    public function testSetGeometry(): void {
 
         // Set a Geometry mock.
         $geometry = new GeometryCollection();
@@ -47,7 +47,7 @@ class FeatureTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetProperties() {
+    public function testSetProperties(): void {
 
         // Set a Properties mock.
         $properties = new Properties();
@@ -63,7 +63,7 @@ class FeatureTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new Feature();
 

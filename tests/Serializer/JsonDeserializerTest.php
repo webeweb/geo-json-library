@@ -38,7 +38,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @rteurn void
      */
-    public function testDeserializeBoundingBox() {
+    public function testDeserializeBoundingBox(): void {
 
         // Set a JSON mock.
         $json = file_get_contents(__DIR__ . "/JsonDeserializerTest.testDeserializeBoundingBox.json");
@@ -58,7 +58,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @rteurn void
      */
-    public function testDeserializeFeature() {
+    public function testDeserializeFeature(): void {
 
         // Set a JSON mock.
         $json = file_get_contents(__DIR__ . "/JsonDeserializerTest.testDeserializeFeature.json");
@@ -76,7 +76,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @rteurn void
      */
-    public function testDeserializeFeatureCollection() {
+    public function testDeserializeFeatureCollection(): void {
 
         // Set a JSON mock.
         $json = file_get_contents(__DIR__ . "/JsonDeserializerTest.testDeserializeFeatureCollection.json");
@@ -97,7 +97,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @rteurn void
      */
-    public function testDeserializeFeatureCollectionWithMalformedData() {
+    public function testDeserializeFeatureCollectionWithMalformedData(): void {
 
         // Set a JSON mock.
         $json = file_get_contents(__DIR__ . "/JsonDeserializerTest.testDeserializeFeatureCollectionWithMalformedData.json");
@@ -122,7 +122,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @rteurn void
      */
-    public function testDeserializeGeometry() {
+    public function testDeserializeGeometry(): void {
 
         // Set a JSON mock.
         $json = file_get_contents(__DIR__ . "/JsonDeserializerTest.testDeserializeLineString.json");
@@ -137,7 +137,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeGeometryCollection() {
+    public function testDeserializeGeometryCollection(): void {
 
         // Set a JSON mock.
         $json = file_get_contents(__DIR__ . "/JsonDeserializerTest.testDeserializeGeometryCollection.json");
@@ -159,7 +159,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeLineString() {
+    public function testDeserializeLineString(): void {
 
         // Set a JSON mock.
         $json = file_get_contents(__DIR__ . "/JsonDeserializerTest.testDeserializeLineString.json");
@@ -182,7 +182,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeMultiLineString() {
+    public function testDeserializeMultiLineString(): void {
 
         // Set a JSON mock.
         $json = file_get_contents(__DIR__ . "/JsonDeserializerTest.testDeserializeMultiLineString.json");
@@ -213,7 +213,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeMultiPoint() {
+    public function testDeserializeMultiPoint(): void {
 
         // Set a JSON mock.
         $json = file_get_contents(__DIR__ . "/JsonDeserializerTest.testDeserializeMultiPoint.json");
@@ -236,7 +236,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeMultiPolygon() {
+    public function testDeserializeMultiPolygon(): void {
 
         $json = file_get_contents(__DIR__ . "/JsonDeserializerTest.testDeserializeMultiPolygon.json");
         $data = json_decode($json, true);
@@ -310,7 +310,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializePoint() {
+    public function testDeserializePoint(): void {
 
         // Set a JSON mock.
         $json = file_get_contents(__DIR__ . "/JsonDeserializerTest.testDeserializePoint.json");
@@ -329,7 +329,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializePolygon() {
+    public function testDeserializePolygon(): void {
 
         // Set a JSON mock.
         $json = file_get_contents(__DIR__ . "/JsonDeserializerTest.testDeserializePolygon.json");

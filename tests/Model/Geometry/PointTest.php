@@ -30,7 +30,7 @@ class PointTest extends AbstractTestCase {
      *
      * @retrun void
      */
-    public function testSetPosition() {
+    public function testSetPosition(): void {
 
         // Set a Position mock.
         $position = new Position();
@@ -44,7 +44,7 @@ class PointTest extends AbstractTestCase {
     /**
      * Tests the __construct() method.
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new Point();
 

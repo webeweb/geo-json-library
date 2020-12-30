@@ -26,14 +26,14 @@ class Feature extends GeoJson {
     /**
      * Geometry.
      *
-     * @var Geometry
+     * @var Geometry|null
      */
     private $geometry;
 
     /**
      * Properties.
      *
-     * @var Properties
+     * @var Properties|null
      */
     private $properties;
 
@@ -47,25 +47,25 @@ class Feature extends GeoJson {
     /**
      * Get the geometry.
      *
-     * @return Geometry Returns the geometry.
+     * @return Geometry|null Returns the geometry.
      */
-    public function getGeometry() {
+    public function getGeometry(): ?Geometry {
         return $this->geometry;
     }
 
     /**
      * Get the properties.
      *
-     * @return Properties Returns the properties.
+     * @return Properties|null Returns the properties.
      */
-    public function getProperties() {
+    public function getProperties(): ?Properties {
         return $this->properties;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeFeature($this);
     }
 
@@ -75,7 +75,7 @@ class Feature extends GeoJson {
      * @param Geometry|null $geometry The geometry.
      * @return Feature Returns this feature.
      */
-    public function setGeometry(Geometry $geometry = null) {
+    public function setGeometry(?Geometry $geometry): Feature {
         $this->geometry = $geometry;
         return $this;
     }
@@ -86,7 +86,7 @@ class Feature extends GeoJson {
      * @param Properties|null $properties The properties.
      * @return Feature Returns this feature.
      */
-    public function setProperties(Properties $properties = null) {
+    public function setProperties(?Properties $properties): Feature {
         $this->properties = $properties;
         return $this;
     }

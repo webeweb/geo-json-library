@@ -35,7 +35,7 @@ class LineString extends Geometry {
      * @param Point|null $point The point.
      * @return LineString Returns this line string.
      */
-    public function addPoint(Point $point = null) {
+    public function addPoint(?Point $point ): LineString {
         return $this->addGeometry($point);
     }
 
@@ -44,14 +44,14 @@ class LineString extends Geometry {
      *
      * @return Point[] Returns the points.
      */
-    public function getPoints() {
+    public function getPoints(): array {
         return $this->getGeometries();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeLineString($this);
     }
 }

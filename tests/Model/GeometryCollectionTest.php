@@ -29,7 +29,7 @@ class GeometryCollectionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddGeometry() {
+    public function testAddGeometry(): void {
 
         // Set a Geometry mock.
         $geometry = new GeometryCollection();
@@ -45,7 +45,7 @@ class GeometryCollectionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new GeometryCollection();
 

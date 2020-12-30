@@ -42,7 +42,7 @@ class BoundingBox implements JsonSerializable {
      * @param float $value The value.
      * @return BoundingBox Returns this bounding box.
      */
-    public function addValue($value) {
+    public function addValue(float $value): BoundingBox {
         $this->values[] = $value;
         return $this;
     }
@@ -52,14 +52,14 @@ class BoundingBox implements JsonSerializable {
      *
      * @return float[] Returns the values.
      */
-    public function getValues() {
+    public function getValues(): array {
         return $this->values;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeBoundingBox($this);
     }
 
@@ -69,7 +69,7 @@ class BoundingBox implements JsonSerializable {
      * @param float[] $values The values.
      * @return BoundingBox Returns this bounding box.
      */
-    protected function setValues(array $values) {
+    protected function setValues(array $values): BoundingBox {
         $this->values = $values;
         return $this;
     }

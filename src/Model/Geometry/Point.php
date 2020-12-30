@@ -26,7 +26,7 @@ class Point extends Geometry {
     /**
      * Position.
      *
-     * @var Position
+     * @var Position|null
      */
     private $position;
 
@@ -40,16 +40,16 @@ class Point extends Geometry {
     /**
      * Get the position.
      *
-     * @return Position Returns the position.
+     * @return Position|null Returns the position.
      */
-    public function getPosition() {
+    public function getPosition(): ?Position {
         return $this->position;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializePoint($this);
     }
 
@@ -59,7 +59,7 @@ class Point extends Geometry {
      * @param Position|null $position The position.
      * @return Point Returns this point.
      */
-    public function setPosition(Position $position = null) {
+    public function setPosition(?Position $position): Point {
         $this->position = $position;
         return $this;
     }

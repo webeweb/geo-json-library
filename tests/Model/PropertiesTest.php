@@ -28,7 +28,7 @@ class PropertiesTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddProperty() {
+    public function testAddProperty(): void {
 
         $obj = new Properties();
 
@@ -44,7 +44,7 @@ class PropertiesTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new Properties();
 

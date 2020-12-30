@@ -29,7 +29,7 @@ class GeoJsonTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumTypes() {
+    public function testEnumTypes(): void {
 
         $res = [
             GeoJson::TYPE_POINT,
@@ -49,7 +49,7 @@ class GeoJsonTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("Point", GeoJson::TYPE_POINT);
         $this->assertEquals("MultiPoint", GeoJson::TYPE_MULTIPOINT);

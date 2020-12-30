@@ -22,16 +22,16 @@ trait BoundingBoxTrait {
     /**
      * Bounding box.
      *
-     * @var BoundingBox
+     * @var BoundingBox|null
      */
     private $boundingBox;
 
     /**
      * Get the bounding box.
      *
-     * @return BoundingBox Returns the bounding box.
+     * @return BoundingBox|null Returns the bounding box.
      */
-    public function getBoundingBox() {
+    public function getBoundingBox(): ?BoundingBox {
         return $this->boundingBox;
     }
 
@@ -40,7 +40,7 @@ trait BoundingBoxTrait {
      *
      * @param BoundingBox|null $boundingBox The bounding box.
      */
-    public function setBoundingBox(BoundingBox $boundingBox = null) {
+    public function setBoundingBox(?BoundingBox $boundingBox): self {
         $this->boundingBox = $boundingBox;
         return $this;
     }

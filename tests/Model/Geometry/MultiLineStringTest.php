@@ -30,7 +30,7 @@ class MultiLineStringTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddPoint() {
+    public function testAddPoint(): void {
 
         // Set a Line string mock.
         $lineString = new LineString();
@@ -46,7 +46,7 @@ class MultiLineStringTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new MultiLineString();
 

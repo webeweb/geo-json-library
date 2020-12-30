@@ -30,7 +30,7 @@ class LineStringTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddPoint() {
+    public function testAddPoint(): void {
 
         // Set a Point mock.
         $point = new Point();
@@ -44,7 +44,7 @@ class LineStringTest extends AbstractTestCase {
     /**
      * Tests the __construct() method.
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new LineString();
 

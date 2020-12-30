@@ -53,7 +53,7 @@ class FeatureCollection extends GeoJson {
      * @param Feature|null $feature The feature.
      * @return FeatureCollection Returns this feature collection.
      */
-    public function addFeature(Feature $feature = null) {
+    public function addFeature(?Feature $feature): FeatureCollection {
         if (null !== $feature) {
             $this->features[] = $feature;
         }
@@ -67,7 +67,7 @@ class FeatureCollection extends GeoJson {
      * @param mixed $v The value.
      * @return FeatureCollection Returns this feature collection.
      */
-    public function addForeignMember($k, $v) {
+    public function addForeignMember(string $k, $v): FeatureCollection {
         $this->foreignMembers[$k] = $v;
         return $this;
     }
@@ -77,7 +77,7 @@ class FeatureCollection extends GeoJson {
      *
      * @return Feature[] Returns the features.
      */
-    public function getFeatures() {
+    public function getFeatures(): array {
         return $this->features;
     }
 
@@ -87,7 +87,7 @@ class FeatureCollection extends GeoJson {
      * @param string $k The key.
      * @return mixed|null Returns the foreign member in case of success, null otherwise.
      */
-    public function getForeignMember($k) {
+    public function getForeignMember(string $k) {
         return ArrayHelper::get($this->foreignMembers, $k);
     }
 
@@ -96,14 +96,14 @@ class FeatureCollection extends GeoJson {
      *
      * @return array Returns the foreign members.
      */
-    public function getForeignMembers() {
+    public function getForeignMembers(): array {
         return $this->foreignMembers;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeFeatureCollection($this);
     }
 
@@ -113,7 +113,7 @@ class FeatureCollection extends GeoJson {
      * @param Feature[] $features The features.
      * @return FeatureCollection Returns this feature collection.
      */
-    protected function setFeatures(array $features) {
+    protected function setFeatures(array $features): FeatureCollection {
         $this->features = $features;
         return $this;
     }
@@ -124,7 +124,7 @@ class FeatureCollection extends GeoJson {
      * @param array $foreignMembers The foreign members.
      * @return FeatureCollection Returns this feature collection.
      */
-    protected function setForeignMembers(array $foreignMembers) {
+    protected function setForeignMembers(array $foreignMembers): FeatureCollection {
         $this->foreignMembers = $foreignMembers;
         return $this;
     }

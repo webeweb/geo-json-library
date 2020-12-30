@@ -44,7 +44,7 @@ class Properties implements JsonSerializable {
      * @param mixed $v The value.
      * @return Properties Returns this properties.
      */
-    public function addProperty($k, $v) {
+    public function addProperty(string $k, $v): Properties {
         $this->properties[$k] = $v;
         return $this;
     }
@@ -54,7 +54,7 @@ class Properties implements JsonSerializable {
      *
      * @return array Returns the properties.
      */
-    public function getProperties() {
+    public function getProperties(): array {
         return $this->properties;
     }
 
@@ -64,14 +64,14 @@ class Properties implements JsonSerializable {
      * @param string $k The key.
      * @return mixed|null Returns the property in case of success, null otherwise.
      */
-    public function getProperty($k) {
+    public function getProperty(string $k) {
         return ArrayHelper::get($this->properties, $k);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeProperties($this);
     }
 
@@ -81,7 +81,7 @@ class Properties implements JsonSerializable {
      * @param array $properties The properties.
      * @return Properties Returns this properties.
      */
-    protected function setProperties(array $properties) {
+    protected function setProperties(array $properties): Properties {
         $this->properties = $properties;
         return $this;
     }

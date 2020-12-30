@@ -30,7 +30,7 @@ class MultiPointTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddPoint() {
+    public function testAddPoint(): void {
 
         // Set a Point mock.
         $point = new Point();
@@ -46,7 +46,7 @@ class MultiPointTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new MultiPoint();
 

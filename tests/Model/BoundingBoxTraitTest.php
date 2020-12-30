@@ -28,7 +28,7 @@ class BoundingBoxTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetBoundingBox() {
+    public function testSetBoundingBox(): void {
 
         // Set a Bounding box mock.
         $boundingBox = new BoundingBox();

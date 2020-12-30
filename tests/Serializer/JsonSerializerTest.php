@@ -38,7 +38,7 @@ class JsonSerializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSerializeBoundingBox() {
+    public function testSerializeBoundingBox(): void {
 
         $obj = new BoundingBox();
         $obj->addValue(0.123456789);
@@ -54,7 +54,7 @@ class JsonSerializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSerializeFeature() {
+    public function testSerializeFeature(): void {
 
         $obj = new Feature();
 
@@ -72,7 +72,7 @@ class JsonSerializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSerializeFeatureCollection() {
+    public function testSerializeFeatureCollection(): void {
 
         $obj = new FeatureCollection();
         $obj->setBoundingBox(new BoundingBox());
@@ -93,7 +93,7 @@ class JsonSerializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSerializeGeometryCollection() {
+    public function testSerializeGeometryCollection(): void {
 
         $obj = new GeometryCollection();
 
@@ -109,7 +109,7 @@ class JsonSerializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSerializeLineString() {
+    public function testSerializeLineString(): void {
 
         $obj = new LineString();
 
@@ -125,7 +125,7 @@ class JsonSerializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSerializeMultiLineString() {
+    public function testSerializeMultiLineString(): void {
 
         $obj = new MultiLineString();
 
@@ -141,7 +141,7 @@ class JsonSerializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSerializeMultiPoint() {
+    public function testSerializeMultiPoint(): void {
 
         $obj = new MultiPoint();
 
@@ -157,7 +157,7 @@ class JsonSerializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSerializeMultiPolygon() {
+    public function testSerializeMultiPolygon(): void {
 
         $obj = new MultiPolygon();
 
@@ -173,7 +173,7 @@ class JsonSerializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSerializePoint() {
+    public function testSerializePoint(): void {
 
         $obj = new Point();
 
@@ -189,7 +189,7 @@ class JsonSerializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSerializePolygon() {
+    public function testSerializePolygon(): void {
 
         $obj = new Polygon();
 
@@ -205,7 +205,7 @@ class JsonSerializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSerializePosition() {
+    public function testSerializePosition(): void {
 
         $obj = new Position();
 
@@ -220,7 +220,7 @@ class JsonSerializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSerializeProperties() {
+    public function testSerializeProperties(): void {
 
         $obj = new Properties();
         $obj->addProperty("k", "v");

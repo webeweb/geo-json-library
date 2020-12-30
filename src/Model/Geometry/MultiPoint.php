@@ -35,7 +35,7 @@ class MultiPoint extends Geometry {
      * @param Point|null $point The point.
      * @return MultiPoint Returns this multi point.
      */
-    public function addPoint(Point $point = null) {
+    public function addPoint(?Point $point): MultiPoint {
         return $this->addGeometry($point);
     }
 
@@ -44,14 +44,14 @@ class MultiPoint extends Geometry {
      *
      * @return Point[] Returns the points.
      */
-    public function getPoints() {
+    public function getPoints(): array {
         return $this->getGeometries();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeMultiPoint($this);
     }
 }
