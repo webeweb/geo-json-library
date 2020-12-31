@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.1.1](https://github.com/webeweb/geo-json-library/tree/v1.1.1) (2019-12-31)
+
+- Fix compatibility
+
 ### [1.1.0](https://github.com/webeweb/geo-json-library/tree/v1.1.0) (2019-12-30)
 
 > IMPORTANT NOTICE: The following PHP versions are now not supported
