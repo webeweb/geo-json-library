@@ -1,8 +1,8 @@
 geo-json-library
 ================
 
-[![Build Status](https://img.shields.io/travis/com/webeweb/geo-json-library/master.svg?style=flat-square)](https://travis-ci.com/webeweb/geo-json-library)
-[![Coverage Status](https://img.shields.io/coveralls/webeweb/geo-json-library/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/geo-json-library?branch=master)
+[![Build Status](https://img.shields.io/scrutinizer/build/g/webeweb/geo-json-library/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/geo-json-library/build-status/master)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/webeweb/geo-json-library/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/geo-json-library/?branch=master)
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/quality/g/webeweb/geo-json-library/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/geo-json-library/?branch=master)
 [![Latest Stable Version](https://img.shields.io/packagist/v/webeweb/geo-json-library.svg?style=flat-square)](https://packagist.org/packages/webeweb/geo-json-library)
 [![Latest Unstable Version](https://img.shields.io/packagist/vpre/webeweb/geo-json-library.svg?style=flat-square)](https://packagist.org/packages/webeweb/geo-json-library)
