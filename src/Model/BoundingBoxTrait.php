@@ -39,6 +39,7 @@ trait BoundingBoxTrait {
      * Set the bounding box.
      *
      * @param BoundingBox|null $boundingBox The bounding box.
+     * @return self Returns this instance.
      */
     public function setBoundingBox(?BoundingBox $boundingBox): self {
         $this->boundingBox = $boundingBox;
