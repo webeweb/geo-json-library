@@ -33,7 +33,7 @@ class Polygon extends Geometry {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::TYPE_POLYGON);
+        parent::__construct(static::TYPE_POLYGON);
         $this->setInteriorRings([]);
     }
 

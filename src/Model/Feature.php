@@ -41,7 +41,7 @@ class Feature extends GeoJson {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::TYPE_FEATURE);
+        parent::__construct(static::TYPE_FEATURE);
     }
 
     /**

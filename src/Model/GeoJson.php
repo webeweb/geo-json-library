@@ -113,13 +113,13 @@ abstract class GeoJson implements JsonSerializable {
      */
     public static function enumTypes(): array {
         return [
-            self::TYPE_POINT,
-            self::TYPE_MULTIPOINT,
-            self::TYPE_LINESTRING,
-            self::TYPE_MULTILINESTRING,
-            self::TYPE_POLYGON,
-            self::TYPE_MULTIPOLYGON,
-            self::TYPE_GEOMETRYCOLLECTION,
+            static::TYPE_POINT,
+            static::TYPE_MULTIPOINT,
+            static::TYPE_LINESTRING,
+            static::TYPE_MULTILINESTRING,
+            static::TYPE_POLYGON,
+            static::TYPE_MULTIPOLYGON,
+            static::TYPE_GEOMETRYCOLLECTION,
         ];
     }
 }

@@ -26,7 +26,7 @@ class LineString extends Geometry {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::TYPE_LINESTRING);
+        parent::__construct(static::TYPE_LINESTRING);
     }
 
     /**
