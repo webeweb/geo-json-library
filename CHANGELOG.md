@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.1.4](https://github.com/webeweb/geo-json-library/tree/v1.1.4) (2021-03-01)
+
+- Improve code quality
+
 ### [1.1.3](https://github.com/webeweb/geo-json-library/tree/v1.1.3) (2021-02-05)
 
 - Replace Class:: by static::
