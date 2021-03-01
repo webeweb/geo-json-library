@@ -42,7 +42,7 @@ class FeatureCollection extends GeoJson {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(static::TYPE_FEATURECOLLECTION);
+        parent::__construct(self::TYPE_FEATURECOLLECTION);
         $this->setFeatures([]);
         $this->setForeignMembers([]);
     }

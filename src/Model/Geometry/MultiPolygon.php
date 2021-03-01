@@ -26,7 +26,7 @@ class MultiPolygon extends Geometry {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(static::TYPE_MULTIPOLYGON);
+        parent::__construct(self::TYPE_MULTIPOLYGON);
     }
 
     /**

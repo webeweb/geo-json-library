@@ -34,7 +34,7 @@ class Point extends Geometry {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(static::TYPE_POINT);
+        parent::__construct(self::TYPE_POINT);
     }
 
     /**
