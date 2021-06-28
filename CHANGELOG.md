@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.1.5](https://github.com/webeweb/geo-json-library/tree/v1.1.5) (2021-06-28)
+
+- Update dependencies
+
 ### [1.1.4](https://github.com/webeweb/geo-json-library/tree/v1.1.4) (2021-03-01)
 
 - Improve code quality
