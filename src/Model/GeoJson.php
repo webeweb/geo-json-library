@@ -12,7 +12,7 @@
 namespace WBW\Library\GeoJSON\Model;
 
 use JsonSerializable;
-use WBW\Library\Core\Model\Attribute\StringTypeTrait;
+use WBW\Library\Traits\Strings\StringTypeTrait;
 
 /**
  * Geo JSON.
