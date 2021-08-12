@@ -11,7 +11,7 @@
 
 namespace WBW\Library\GeoJSON\Serializer;
 
-use WBW\Library\Core\Argument\Helper\ArrayHelper;
+use WBW\Library\Types\Helper\ArrayHelper;
 use WBW\Library\GeoJSON\Model\BoundingBox;
 use WBW\Library\GeoJSON\Model\Feature;
 use WBW\Library\GeoJSON\Model\FeatureCollection;

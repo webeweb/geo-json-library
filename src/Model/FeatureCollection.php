@@ -11,7 +11,7 @@
 
 namespace WBW\Library\GeoJSON\Model;
 
-use WBW\Library\Core\Argument\Helper\ArrayHelper;
+use WBW\Library\Types\Helper\ArrayHelper;
 use WBW\Library\GeoJSON\Serializer\JsonSerializer;
 
 /**
