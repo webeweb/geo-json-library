@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.1.7](https://github.com/webeweb/geo-json-library/tree/v1.1.7) (2021-08-16)
+
+- Update dependencies
+
 ### [1.1.6](https://github.com/webeweb/geo-json-library/tree/v1.1.6) (2021-08-12)
 
 - Update dependencies
