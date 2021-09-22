@@ -4,22 +4,30 @@ DOCUMENTATION
 Deserializes a Feature collection:
 
 ```php
+use WBW\Library\GeoJSON\Model\BoundingBox;
+use WBW\Library\GeoJSON\Model\Feature;
+use WBW\Library\GeoJSON\Model\FeatureCollection;
+use WBW\Library\GeoJSON\Model\Geometry;
+use WBW\Library\GeoJSON\Model\Properties;
+use WBW\Library\GeoJSON\Serializer\JsonDeserializer;
+
 $json = '{"type": "FeatureCollection", "features": [...]}';
 $data = json_decode($json, true);
 
 // Deserializes a feature collection. 
 $result = JsonDeserializer::deserializeFeatureCollection($data);
 
-$mainBbox = $result->getBoundingBox();
-$features = $result->getFeatures();
-$members  = $result->getForeignMembers();
+$mainBbox = $result->getBoundingBox(); /** @var BoundingBox $mainBbox */
+$features = $result->getFeatures(); /** @var Feature[] $features */
+$members  = $result->getForeignMembers(); /** @var mixed[] $members */
 
 // Handle the features.
+/** @var Feature $current */
 foreach($features as $current) {
 
-    $bbox       = $current->getBoundingBox(); 
-    $geometry   = $current->getGeometry();
-    $properties = $current->getProperties();
+    $bbox       = $current->getBoundingBox(); /** @var BoundingBox $bbox */ 
+    $geometry   = $current->getGeometry(); /** @var Geometry $geometry */
+    $properties = $current->getProperties(); /** @var Properties $properties */
     
     // $geometry must be a Point, MultiPoint, LineString, MultiLineString, Polygon, MultiPolygon or GeometryCollection.
 }
@@ -28,6 +36,8 @@ foreach($features as $current) {
 1) Point
 
 ```php
+use WBW\Library\GeoJSON\Model\Geometry\Point;
+
 /** @var Point $geometry */
 $geometry->getPosition()->getLongitude();
 $geometry->getPosition()->getLatitude();
@@ -37,6 +47,8 @@ $geometry->getPosition()->getAltitude();
 2) MultiPoint
 
 ```php
+use WBW\Library\GeoJSON\Model\Geometry\MultiPoint;
+
 /** @var MultiPoint $geometry */
 foreach($geometry->getPoints() as $current) {
 
@@ -50,6 +62,8 @@ foreach($geometry->getPoints() as $current) {
 3) LineString
 
 ```php
+use WBW\Library\GeoJSON\Model\Geometry\LineString;
+
 /** @var LineString $geometry */
 foreach($geometry->getPoints() as $current) {
 
@@ -63,6 +77,8 @@ foreach($geometry->getPoints() as $current) {
 4) MultiLineString
 
 ```php
+use WBW\Library\GeoJSON\Model\Geometry\MultiLineString;
+
 /** @var MultiLineString $geometry */
 foreach($geometry->getLineStrings() as $current) {
 
@@ -79,6 +95,8 @@ foreach($geometry->getLineStrings() as $current) {
 5) Polygon
 
 ```php
+use WBW\Library\GeoJSON\Model\Geometry\Polygon;
+
 /** @var Polygon $geometry */
 foreach($geometry->getExteriorRings() as $current) {
 
@@ -100,6 +118,8 @@ foreach($geometry->getInteriorRings() as $current) {
 6) MultiPolygon
 
 ```php
+use WBW\Library\GeoJSON\Model\Geometry\MultiPolygon;
+
 /** @var MultiPolygon $geometry */
 foreach($geometry->getPolygons() as $current) {
 
@@ -117,6 +137,8 @@ foreach($geometry->getPolygons() as $current) {
 7) GeometryCollection
 
 ```php
+use WBW\Library\GeoJSON\Model\GeometryCollection;
+
 /** @var GeometryCollection $geometry */
 foreach($geometry->getGeometries() as $current) {
 
