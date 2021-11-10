@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+### [1.2.0](https://github.com/webeweb/geo-json-library/tree/v1.2.0) (2021-11-10)
+
+- Improve documentation
+- Improve JSON serializer
+- Update PHPDoc
+
 ### [1.1.8](https://github.com/webeweb/geo-json-library/tree/v1.1.8) (2021-09-22)
 
 - Improve documentation
