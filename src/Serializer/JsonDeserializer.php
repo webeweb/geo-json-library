@@ -39,7 +39,7 @@ class JsonDeserializer {
      * Deserializes a bounding box.
      *
      * @param array $data The data.
-     * @return BoundingBox|null Returns the bounding box in case of success, null otherwise.
+     * @return BoundingBox|null Returns the bounding box.
      */
     protected static function deserializeBoundingBox(array $data): ?BoundingBox {
 
@@ -59,7 +59,7 @@ class JsonDeserializer {
      * Deserializes a feature.
      *
      * @param array $data The data.
-     * @return Feature|null Returns the feature in case of success, null otherwise.
+     * @return Feature|null Returns the feature.
      */
     protected static function deserializeFeature(array $data): ?Feature {
 
@@ -104,7 +104,7 @@ class JsonDeserializer {
      * Deserializes a geometry.
      *
      * @param array $data The data.
-     * @return Geometry|null Returns the geometry in case of success, null otherwise.
+     * @return Geometry|null Returns the geometry.
      */
     protected static function deserializeGeometry(array $data): ?Geometry {
 
@@ -144,7 +144,7 @@ class JsonDeserializer {
      * Deserializes a line string.
      *
      * @param array $data The data.
-     * @return LineString|null Returns the line string in case of success, null otherwise.
+     * @return LineString|null Returns the line string.
      */
     protected static function deserializeLineString(array $data): ?LineString {
 
@@ -176,7 +176,7 @@ class JsonDeserializer {
      * Deserializes a multi point.
      *
      * @param array $data The data.
-     * @return MultiPoint|null Returns the multi point in case of success, null otherwise.
+     * @return MultiPoint|null Returns the multi point.
      */
     protected static function deserializeMultiPoint(array $data): ?MultiPoint {
 
@@ -208,7 +208,7 @@ class JsonDeserializer {
      * Deserializes a point.
      *
      * @param array $data The data.
-     * @return Point|null Returns the point in case of success, null otherwise.
+     * @return Point|null Returns the point.
      */
     protected static function deserializePoint(array $data): ?Point {
 
@@ -222,7 +222,7 @@ class JsonDeserializer {
      * Deserializes a polygon.
      *
      * @param array $data The data.
-     * @return Polygon|null Returns the polygon in case of success, null otherwise.
+     * @return Polygon|null Returns the polygon.
      */
     protected static function deserializePolygon(array $data): ?Polygon {
 
@@ -251,7 +251,7 @@ class JsonDeserializer {
      * Deserializes a position.
      *
      * @param array $data The data.
-     * @return Position|null Returns the position in case of success, null otherwise.
+     * @return Position|null Returns the position.
      */
     protected static function deserializePosition(array $data): ?Position {
 
@@ -272,7 +272,7 @@ class JsonDeserializer {
      * Deserializes a properties.
      *
      * @param array $data The data.
-     * @return Properties|null Returns the properties in case of success, null otherwise.
+     * @return Properties|null Returns the properties.
      */
     protected static function deserializeProperties(array $data): ?Properties {
 
