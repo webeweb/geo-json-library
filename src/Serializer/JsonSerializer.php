@@ -11,11 +11,9 @@
 
 namespace WBW\Library\GeoJSON\Serializer;
 
-use JsonSerializable;
 use WBW\Library\GeoJSON\Model\BoundingBox;
 use WBW\Library\GeoJSON\Model\Feature;
 use WBW\Library\GeoJSON\Model\FeatureCollection;
-use WBW\Library\GeoJSON\Model\GeoJson;
 use WBW\Library\GeoJSON\Model\Geometry\LineString;
 use WBW\Library\GeoJSON\Model\Geometry\MultiLineString;
 use WBW\Library\GeoJSON\Model\Geometry\MultiPoint;
@@ -25,6 +23,7 @@ use WBW\Library\GeoJSON\Model\Geometry\Polygon;
 use WBW\Library\GeoJSON\Model\GeometryCollection;
 use WBW\Library\GeoJSON\Model\Position;
 use WBW\Library\GeoJSON\Model\Properties;
+use WBW\Library\Serializer\Helper\JsonSerializerHelper;
 
 /**
  * JSON serializer.
@@ -33,22 +32,6 @@ use WBW\Library\GeoJSON\Model\Properties;
  * @package WBW\Library\GeoJSON\Serializer
  */
 class JsonSerializer {
-
-    /**
-     * Serializes an array.
-     *
-     * @param GeoJson[] $models The models.
-     * @return array Returns the serialized array.
-     */
-    protected static function serializeArray(array $models): array {
-
-        $result = [];
-        foreach ($models as $current) {
-            $result[] = static::serializeModel($current);
-        }
-
-        return $result;
-    }
 
     /**
      * Serializes a bounding box.
@@ -69,9 +52,9 @@ class JsonSerializer {
     public static function serializeFeature(Feature $model): array {
         return [
             "type"       => $model->getType(),
-            "bbox"       => static::serializeModel($model->getBoundingBox()),
-            "geometry"   => static::serializeModel($model->getGeometry()),
-            "properties" => static::serializeModel($model->getProperties()),
+            "bbox"       => JsonSerializerHelper::jsonSerializeModel($model->getBoundingBox()),
+            "geometry"   => JsonSerializerHelper::jsonSerializeModel($model->getGeometry()),
+            "properties" => JsonSerializerHelper::jsonSerializeModel($model->getProperties()),
         ];
     }
 
@@ -85,8 +68,8 @@ class JsonSerializer {
 
         $result = [
             "type"     => $model->getType(),
-            "bbox"     => static::serializeModel($model->getBoundingBox()),
-            "features" => static::serializeArray($model->getFeatures()),
+            "bbox"     => JsonSerializerHelper::jsonSerializeModel($model->getBoundingBox()),
+            "features" => JsonSerializerHelper::jsonSerializeArray($model->getFeatures()),
         ];
 
         return array_merge($result, $model->getForeignMembers());
@@ -101,7 +84,7 @@ class JsonSerializer {
     public static function serializeGeometryCollection(GeometryCollection $model): array {
         return [
             "type"       => $model->getType(),
-            "geometries" => static::serializeArray($model->getGeometries()),
+            "geometries" => JsonSerializerHelper::jsonSerializeArray($model->getGeometries()),
         ];
     }
 
@@ -114,21 +97,8 @@ class JsonSerializer {
     public static function serializeLineString(LineString $model): array {
         return [
             "type"        => $model->getType(),
-            "coordinates" => static::serializeArray($model->getPoints()),
+            "coordinates" => JsonSerializerHelper::jsonSerializeArray($model->getPoints()),
         ];
-    }
-
-    /**
-     * Serializes a geo JSON.
-     *
-     * @param JsonSerializable|null $model The geo JSON.
-     * @return array|null Returns the serialized geo JSON in case of success, null otherwise.
-     */
-    protected static function serializeModel(?JsonSerializable $model): ?array {
-        if (null === $model) {
-            return null;
-        }
-        return $model->jsonSerialize();
     }
 
     /**
@@ -140,7 +110,7 @@ class JsonSerializer {
     public static function serializeMultiLineString(MultiLineString $model): array {
         return [
             "type"        => $model->getType(),
-            "coordinates" => static::serializeArray($model->getLineStrings()),
+            "coordinates" => JsonSerializerHelper::jsonSerializeArray($model->getLineStrings()),
         ];
     }
 
@@ -153,7 +123,7 @@ class JsonSerializer {
     public static function serializeMultiPoint(MultiPoint $model): array {
         return [
             "type"        => $model->getType(),
-            "coordinates" => static::serializeArray($model->getPoints()),
+            "coordinates" => JsonSerializerHelper::jsonSerializeArray($model->getPoints()),
         ];
     }
 
@@ -166,7 +136,7 @@ class JsonSerializer {
     public static function serializeMultiPolygon(MultiPolygon $model): array {
         return [
             "type"        => $model->getType(),
-            "coordinates" => static::serializeArray($model->getPolygons()),
+            "coordinates" => JsonSerializerHelper::jsonSerializeArray($model->getPolygons()),
         ];
     }
 
@@ -179,7 +149,7 @@ class JsonSerializer {
     public static function serializePoint(Point $model): array {
         return [
             "type"        => $model->getType(),
-            "coordinates" => static::serializeModel($model->getPosition()),
+            "coordinates" => JsonSerializerHelper::jsonSerializeModel($model->getPosition()),
         ];
     }
 
@@ -193,8 +163,8 @@ class JsonSerializer {
         return [
             "type"        => $model->getType(),
             "coordinates" => [
-                static::serializeArray($model->getExteriorRings()),
-                static::serializeArray($model->getInteriorRings()),
+                JsonSerializerHelper::jsonSerializeArray($model->getExteriorRings()),
+                JsonSerializerHelper::jsonSerializeArray($model->getInteriorRings()),
             ],
         ];
     }
