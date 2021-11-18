@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\GeoJSON\Tests\Model\Geometry;
+namespace WBW\Library\GeoJson\Tests\Model\Geometry;
 
 use JsonSerializable;
 use PHPUnit\Framework\TestCase;
-use WBW\Library\GeoJSON\Model\GeoJson;
-use WBW\Library\GeoJSON\Model\Geometry\MultiPolygon;
-use WBW\Library\GeoJSON\Model\Geometry\Polygon;
+use WBW\Library\GeoJson\Model\GeoJson;
+use WBW\Library\GeoJson\Model\Geometry\MultiPolygon;
+use WBW\Library\GeoJson\Model\Geometry\Polygon;
 
 /**
  * Multi polygon test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Library\GeoJSON\Tests\Model\Geometry
+ * @package WBW\Library\GeoJson\Tests\Model\Geometry
  */
 class MultiPolygonTest extends TestCase {
 

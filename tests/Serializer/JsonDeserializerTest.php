@@ -9,27 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\GeoJSON\Tests\Serializer;
+namespace WBW\Library\GeoJson\Tests\Serializer;
 
-use WBW\Library\GeoJSON\Model\BoundingBox;
-use WBW\Library\GeoJSON\Model\Feature;
-use WBW\Library\GeoJSON\Model\FeatureCollection;
-use WBW\Library\GeoJSON\Model\Geometry;
-use WBW\Library\GeoJSON\Model\Geometry\LineString;
-use WBW\Library\GeoJSON\Model\Geometry\MultiLineString;
-use WBW\Library\GeoJSON\Model\Geometry\MultiPoint;
-use WBW\Library\GeoJSON\Model\Geometry\MultiPolygon;
-use WBW\Library\GeoJSON\Model\Geometry\Point;
-use WBW\Library\GeoJSON\Model\Geometry\Polygon;
-use WBW\Library\GeoJSON\Model\GeometryCollection;
-use WBW\Library\GeoJSON\Tests\AbstractTestCase;
-use WBW\Library\GeoJSON\Tests\Fixtures\Serializer\TestJsonDeserializer;
+use WBW\Library\GeoJson\Model\BoundingBox;
+use WBW\Library\GeoJson\Model\Feature;
+use WBW\Library\GeoJson\Model\FeatureCollection;
+use WBW\Library\GeoJson\Model\Geometry;
+use WBW\Library\GeoJson\Model\Geometry\LineString;
+use WBW\Library\GeoJson\Model\Geometry\MultiLineString;
+use WBW\Library\GeoJson\Model\Geometry\MultiPoint;
+use WBW\Library\GeoJson\Model\Geometry\MultiPolygon;
+use WBW\Library\GeoJson\Model\Geometry\Point;
+use WBW\Library\GeoJson\Model\Geometry\Polygon;
+use WBW\Library\GeoJson\Model\GeometryCollection;
+use WBW\Library\GeoJson\Tests\AbstractTestCase;
+use WBW\Library\GeoJson\Tests\Fixtures\Serializer\TestJsonDeserializer;
 
 /**
  * JSON deserializer test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Library\GeoJSON\Tests\Serializer
+ * @package WBW\Library\GeoJson\Tests\Serializer
  */
 class JsonDeserializerTest extends AbstractTestCase {
 

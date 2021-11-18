@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\GeoJSON\Model;
+namespace WBW\Library\GeoJson\Model;
 
 use JsonSerializable;
 use WBW\Library\Traits\Strings\StringTypeTrait;
@@ -18,7 +18,7 @@ use WBW\Library\Traits\Strings\StringTypeTrait;
  * Geo JSON.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Library\GeoJSON\Model
+ * @package WBW\Library\GeoJson\Model
  * @abstract
  */
 abstract class GeoJson implements JsonSerializable, GeoJsonInterface {

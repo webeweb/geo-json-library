@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\GeoJSON\Model;
+namespace WBW\Library\GeoJson\Model;
 
 /**
  * Geo JSON interface.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Library\GeoJSON\Model
+ * @package WBW\Library\GeoJson\Model
  */
 interface GeoJsonInterface {
 

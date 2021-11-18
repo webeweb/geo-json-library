@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\GeoJSON\Tests\Fixtures\Model;
+namespace WBW\Library\GeoJson\Tests\Fixtures\Model;
 
-use WBW\Library\GeoJSON\Model\BoundingBoxTrait;
+use WBW\Library\GeoJson\Model\BoundingBoxTrait;
 
 /**
  * Test bounding box trait.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Library\GeoJSON\Tests\Fixtures\Model
+ * @package WBW\Library\GeoJson\Tests\Fixtures\Model
  */
 class TestBoundingBoxTrait {
 

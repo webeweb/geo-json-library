@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\GeoJSON\Tests\Model;
+namespace WBW\Library\GeoJson\Tests\Model;
 
 use JsonSerializable;
-use WBW\Library\GeoJSON\Model\Properties;
-use WBW\Library\GeoJSON\Tests\AbstractTestCase;
+use WBW\Library\GeoJson\Model\Properties;
+use WBW\Library\GeoJson\Tests\AbstractTestCase;
 
 /**
  * Properties test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Library\GeoJSON\Tests\Model
+ * @package WBW\Library\GeoJson\Tests\Model
  */
 class PropertiesTest extends AbstractTestCase {
 

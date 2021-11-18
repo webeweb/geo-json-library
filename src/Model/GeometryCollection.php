@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\GeoJSON\Model;
+namespace WBW\Library\GeoJson\Model;
 
-use WBW\Library\GeoJSON\Serializer\JsonSerializer;
+use WBW\Library\GeoJson\Serializer\JsonSerializer;
 
 /**
  * Geometry collection.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Library\GeoJSON\Model
+ * @package WBW\Library\GeoJson\Model
  */
 class GeometryCollection extends Geometry {
 

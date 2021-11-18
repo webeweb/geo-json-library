@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\GeoJSON\Model\Geometry;
+namespace WBW\Library\GeoJson\Model\Geometry;
 
-use WBW\Library\GeoJSON\Model\Geometry;
-use WBW\Library\GeoJSON\Serializer\JsonSerializer;
+use WBW\Library\GeoJson\Model\Geometry;
+use WBW\Library\GeoJson\Serializer\JsonSerializer;
 
 /**
  * Line string.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Library\GeoJSON\Model\Geometry
+ * @package WBW\Library\GeoJson\Model\Geometry
  */
 class LineString extends Geometry {
 

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\GeoJSON\Tests;
+namespace WBW\Library\GeoJson\Tests;
 
 use PHPUnit\Framework\TestCase;
 
@@ -17,7 +17,7 @@ use PHPUnit\Framework\TestCase;
  * Abstract test case.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\GeoJSON\Tests
+ * @package WBW\Library\GeoJson\Tests
  * @abstract
  */
 abstract class AbstractTestCase extends TestCase {

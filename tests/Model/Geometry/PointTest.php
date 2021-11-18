@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\GeoJSON\Tests\Model\Geometry;
+namespace WBW\Library\GeoJson\Tests\Model\Geometry;
 
 use JsonSerializable;
-use WBW\Library\GeoJSON\Model\GeoJson;
-use WBW\Library\GeoJSON\Model\Geometry\Point;
-use WBW\Library\GeoJSON\Model\Position;
-use WBW\Library\GeoJSON\Tests\AbstractTestCase;
+use WBW\Library\GeoJson\Model\GeoJson;
+use WBW\Library\GeoJson\Model\Geometry\Point;
+use WBW\Library\GeoJson\Model\Position;
+use WBW\Library\GeoJson\Tests\AbstractTestCase;
 
 /**
  * Point test.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Library\GeoJSON\Tests\Model\Geometry
+ * @package WBW\Library\GeoJson\Tests\Model\Geometry
  */
 class PointTest extends AbstractTestCase {
 

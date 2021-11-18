@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\GeoJSON\Tests\Fixtures\Model;
+namespace WBW\Library\GeoJson\Tests\Fixtures\Model;
 
-use WBW\Library\GeoJSON\Model\Geometry;
+use WBW\Library\GeoJson\Model\Geometry;
 
 /**
  * Test geometry.
  *
  * @author webeweb <https://github.com/webeweb>
- * @package WBW\Library\GeoJSON\Tests\Fixtures\Model
+ * @package WBW\Library\GeoJson\Tests\Fixtures\Model
  */
 class TestGeometry extends Geometry {
 

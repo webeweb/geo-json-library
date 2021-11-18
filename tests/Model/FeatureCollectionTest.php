@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\GeoJSON\Tests\Model;
+namespace WBW\Library\GeoJson\Tests\Model;
 
 use JsonSerializable;
-use WBW\Library\GeoJSON\Model\Feature;
-use WBW\Library\GeoJSON\Model\FeatureCollection;
-use WBW\Library\GeoJSON\Model\GeoJson;
-use WBW\Library\GeoJSON\Tests\AbstractTestCase;
+use WBW\Library\GeoJson\Model\Feature;
+use WBW\Library\GeoJson\Model\FeatureCollection;
+use WBW\Library\GeoJson\Model\GeoJson;
+use WBW\Library\GeoJson\Tests\AbstractTestCase;
 
 /**
  * Feature collection test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\GeoJSON\Tests\Model
+ * @package WBW\Library\GeoJson\Tests\Model
  */
 class FeatureCollectionTest extends AbstractTestCase {
 

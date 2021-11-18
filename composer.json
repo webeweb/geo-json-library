@@ -34,12 +34,12 @@
     },
     "autoload": {
         "psr-4": {
-            "WBW\\Library\\GeoJSON\\": "src/"
+            "WBW\\Library\\GeoJson\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "WBW\\Library\\GeoJSON\\Tests\\": "tests/"
+            "WBW\\Library\\GeoJson\\Tests\\": "tests/"
         }
     },
     "support": {
