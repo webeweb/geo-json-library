@@ -34,6 +34,7 @@ abstract class Geometry extends GeoJson {
      */
     protected function __construct(string $type) {
         parent::__construct($type);
+
         $this->setGeometries([]);
     }
 
