@@ -26,7 +26,7 @@ use WBW\Library\GeoJson\Tests\AbstractTestCase;
 class PolygonTest extends AbstractTestCase {
 
     /**
-     * Tests the addExteriorRing() method.
+     * Tests addExteriorRing()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class PolygonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the addInteriorRing() method.
+     * Tests addInteriorRing()
      *
      * @return void
      */
@@ -58,7 +58,7 @@ class PolygonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

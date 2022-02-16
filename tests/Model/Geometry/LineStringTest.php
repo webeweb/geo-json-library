@@ -26,7 +26,7 @@ use WBW\Library\GeoJson\Tests\AbstractTestCase;
 class LineStringTest extends AbstractTestCase {
 
     /**
-     * Tests the addPoint() method.
+     * Tests addPoint()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class LineStringTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      */
     public function test__construct(): void {
 

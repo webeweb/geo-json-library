@@ -24,7 +24,7 @@ use WBW\Library\GeoJson\Tests\Fixtures\Model\TestGeometry;
 class GeometryTest extends AbstractTestCase {
 
     /**
-     * Tests the addGeometry() method.
+     * Tests addGeometry()
      *
      * @return void
      */
@@ -40,7 +40,7 @@ class GeometryTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

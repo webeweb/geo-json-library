@@ -24,7 +24,7 @@ use WBW\Library\GeoJson\Tests\AbstractTestCase;
 class PropertiesTest extends AbstractTestCase {
 
     /**
-     * Tests the addProperty() method.
+     * Tests addProperty()
      *
      * @return void
      */
@@ -40,7 +40,7 @@ class PropertiesTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

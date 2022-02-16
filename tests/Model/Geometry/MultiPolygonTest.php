@@ -26,7 +26,7 @@ use WBW\Library\GeoJson\Model\Geometry\Polygon;
 class MultiPolygonTest extends TestCase {
 
     /**
-     * Tests the addPolygon() method.
+     * Tests addPolygon()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class MultiPolygonTest extends TestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

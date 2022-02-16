@@ -27,7 +27,7 @@ use WBW\Library\GeoJson\Tests\AbstractTestCase;
 class FeatureTest extends AbstractTestCase {
 
     /**
-     * Tests the setGeometry() method.
+     * Tests setGeometry()
      *
      * @return void
      */
@@ -43,7 +43,7 @@ class FeatureTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setProperties() method.
+     * Tests setProperties()
      *
      * @return void
      */
@@ -59,7 +59,7 @@ class FeatureTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

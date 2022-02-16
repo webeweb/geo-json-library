@@ -26,7 +26,7 @@ use WBW\Library\GeoJson\Tests\AbstractTestCase;
 class PointTest extends AbstractTestCase {
 
     /**
-     * Tests the setPosition() method.
+     * Tests setPosition()
      *
      * @retrun void
      */
@@ -42,7 +42,7 @@ class PointTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      */
     public function test__construct(): void {
 

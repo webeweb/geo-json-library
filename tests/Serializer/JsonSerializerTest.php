@@ -34,7 +34,7 @@ use WBW\Library\GeoJson\Tests\AbstractTestCase;
 class JsonSerializerTest extends AbstractTestCase {
 
     /**
-     * Tests the serializeBoundingBox() method.
+     * Tests serializeBoundingBox()
      *
      * @return void
      */
@@ -50,7 +50,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the serializeFeature() method.
+     * Tests serializeFeature()
      *
      * @return void
      */
@@ -68,7 +68,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the serializeFeatureCollection() method.
+     * Tests serializeFeatureCollection()
      *
      * @return void
      */
@@ -89,7 +89,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the serializeGeometryCollection() method.
+     * Tests serializeGeometryCollection()
      *
      * @return void
      */
@@ -105,7 +105,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the serializeLineString() method.
+     * Tests serializeLineString()
      *
      * @return void
      */
@@ -121,7 +121,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the serializeMultiLineString() method.
+     * Tests serializeMultiLineString()
      *
      * @return void
      */
@@ -137,7 +137,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the serializeMultiPoint() method.
+     * Tests serializeMultiPoint()
      *
      * @return void
      */
@@ -153,7 +153,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the serializeMultiPolygon() method.
+     * Tests serializeMultiPolygon()
      *
      * @return void
      */
@@ -169,7 +169,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the serializePoint() method.
+     * Tests serializePoint()
      *
      * @return void
      */
@@ -185,7 +185,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the serializePolygon() method.
+     * Tests serializePolygon()
      *
      * @return void
      */
@@ -201,7 +201,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the serializePosition() method.
+     * Tests serializePosition()
      *
      * @return void
      */
@@ -216,7 +216,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the serializeProperties() method.
+     * Tests serializeProperties()
      *
      * @return void
      */
