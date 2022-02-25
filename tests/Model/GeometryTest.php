@@ -18,7 +18,7 @@ use WBW\Library\GeoJson\Tests\Fixtures\Model\TestGeometry;
 /**
  * Geometry test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\GeoJson\Tests\Model
  */
 class GeometryTest extends AbstractTestCase {

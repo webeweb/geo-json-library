@@ -20,7 +20,7 @@ use WBW\Library\GeoJson\Tests\AbstractTestCase;
 /**
  * Feature collection test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\GeoJson\Tests\Model
  */
 class FeatureCollectionTest extends AbstractTestCase {

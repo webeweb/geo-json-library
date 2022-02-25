@@ -19,7 +19,7 @@ use WBW\Library\GeoJson\Tests\AbstractTestCase;
 /**
  * Geometry collection test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\GeoJson\Tests\Model
  */
 class GeometryCollectionTest extends AbstractTestCase {

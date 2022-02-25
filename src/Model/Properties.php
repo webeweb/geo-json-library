@@ -18,7 +18,7 @@ use WBW\Library\GeoJson\Serializer\JsonSerializer;
 /**
  * Properties.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\GeoJson\Model
  */
 class Properties implements JsonSerializable {
