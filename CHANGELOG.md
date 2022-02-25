@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve PHPDoc
+
 ### [1.3.0](https://github.com/webeweb/geo-json-library/tree/v1.3.0) (2021-11-18)
 
 - Rename package
