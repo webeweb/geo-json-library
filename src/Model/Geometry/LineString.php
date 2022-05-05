@@ -49,7 +49,7 @@ class LineString extends Geometry {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeLineString($this);

@@ -102,7 +102,7 @@ class FeatureCollection extends GeoJson {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeFeatureCollection($this);

@@ -80,7 +80,7 @@ class Polygon extends Geometry {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializePolygon($this);

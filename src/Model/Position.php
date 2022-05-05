@@ -78,7 +78,7 @@ class Position implements JsonSerializable {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializePosition($this);
