@@ -1,8 +1,9 @@
 CHANGELOG
 =========
 
-### master
+### [1.3.1](https://github.com/webeweb/geo-json-library/tree/v1.3.1) (2022-06-17)
 
+- Improve code quality
 - Improve PHPDoc
 
 ### [1.3.0](https://github.com/webeweb/geo-json-library/tree/v1.3.0) (2021-11-18)
