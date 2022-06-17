@@ -11,11 +11,11 @@
 
 namespace WBW\Library\GeoJson\Serializer;
 
-use WBW\Library\Types\Helper\ArrayHelper;
 use WBW\Library\GeoJson\Model\BoundingBox;
 use WBW\Library\GeoJson\Model\Feature;
 use WBW\Library\GeoJson\Model\FeatureCollection;
 use WBW\Library\GeoJson\Model\GeoJson;
+use WBW\Library\GeoJson\Model\GeoJsonInterface;
 use WBW\Library\GeoJson\Model\Geometry;
 use WBW\Library\GeoJson\Model\Geometry\LineString;
 use WBW\Library\GeoJson\Model\Geometry\MultiLineString;
@@ -26,6 +26,7 @@ use WBW\Library\GeoJson\Model\Geometry\Polygon;
 use WBW\Library\GeoJson\Model\GeometryCollection;
 use WBW\Library\GeoJson\Model\Position;
 use WBW\Library\GeoJson\Model\Properties;
+use WBW\Library\Types\Helper\ArrayHelper;
 
 /**
  * JSON deserializer.
@@ -63,7 +64,7 @@ class JsonDeserializer {
      */
     protected static function deserializeFeature(array $data): ?Feature {
 
-        if (GeoJson::TYPE_FEATURE !== ArrayHelper::get($data, "type")) {
+        if (GeoJsonInterface::TYPE_FEATURE !== ArrayHelper::get($data, "type")) {
             return null;
         }
 
@@ -113,8 +114,8 @@ class JsonDeserializer {
             return null;
         }
 
-        $fct = __NAMESPACE__ . "\\JsonDeserializer::deserialize{$type}";
-        $key = GeoJson::TYPE_GEOMETRYCOLLECTION === $type ? "geometries" : "coordinates";
+        $fct = __NAMESPACE__ . "\\JsonDeserializer::deserialize$type";
+        $key = GeoJsonInterface::TYPE_GEOMETRYCOLLECTION === $type ? "geometries" : "coordinates";
 
         $arg = ArrayHelper::get($data, $key, []);
         if (0 === count($arg)) {

@@ -13,6 +13,7 @@ namespace WBW\Library\GeoJson\Tests\Model;
 
 use JsonSerializable;
 use WBW\Library\GeoJson\Model\GeoJson;
+use WBW\Library\GeoJson\Model\GeoJsonInterface;
 use WBW\Library\GeoJson\Tests\AbstractTestCase;
 use WBW\Library\GeoJson\Tests\Fixtures\Model\TestGeoJson;
 
@@ -32,13 +33,13 @@ class GeoJsonTest extends AbstractTestCase {
     public function testEnumTypes(): void {
 
         $res = [
-            GeoJson::TYPE_POINT,
-            GeoJson::TYPE_MULTIPOINT,
-            GeoJson::TYPE_LINESTRING,
-            GeoJson::TYPE_MULTILINESTRING,
-            GeoJson::TYPE_POLYGON,
-            GeoJson::TYPE_MULTIPOLYGON,
-            GeoJson::TYPE_GEOMETRYCOLLECTION,
+            GeoJsonInterface::TYPE_POINT,
+            GeoJsonInterface::TYPE_MULTIPOINT,
+            GeoJsonInterface::TYPE_LINESTRING,
+            GeoJsonInterface::TYPE_MULTILINESTRING,
+            GeoJsonInterface::TYPE_POLYGON,
+            GeoJsonInterface::TYPE_MULTIPOLYGON,
+            GeoJsonInterface::TYPE_GEOMETRYCOLLECTION,
         ];
 
         $this->assertEquals($res, GeoJson::enumTypes());
@@ -51,16 +52,16 @@ class GeoJsonTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
-        $this->assertEquals("Point", GeoJson::TYPE_POINT);
-        $this->assertEquals("MultiPoint", GeoJson::TYPE_MULTIPOINT);
-        $this->assertEquals("LineString", GeoJson::TYPE_LINESTRING);
-        $this->assertEquals("MultiLineString", GeoJson::TYPE_MULTILINESTRING);
-        $this->assertEquals("Polygon", GeoJson::TYPE_POLYGON);
-        $this->assertEquals("MultiPolygon", GeoJson::TYPE_MULTIPOLYGON);
-        $this->assertEquals("GeometryCollection", GeoJson::TYPE_GEOMETRYCOLLECTION);
+        $this->assertEquals("Point", GeoJsonInterface::TYPE_POINT);
+        $this->assertEquals("MultiPoint", GeoJsonInterface::TYPE_MULTIPOINT);
+        $this->assertEquals("LineString", GeoJsonInterface::TYPE_LINESTRING);
+        $this->assertEquals("MultiLineString", GeoJsonInterface::TYPE_MULTILINESTRING);
+        $this->assertEquals("Polygon", GeoJsonInterface::TYPE_POLYGON);
+        $this->assertEquals("MultiPolygon", GeoJsonInterface::TYPE_MULTIPOLYGON);
+        $this->assertEquals("GeometryCollection", GeoJsonInterface::TYPE_GEOMETRYCOLLECTION);
 
-        $this->assertEquals("Feature", GeoJson::TYPE_FEATURE);
-        $this->assertEquals("FeatureCollection", GeoJson::TYPE_FEATURECOLLECTION);
+        $this->assertEquals("Feature", GeoJsonInterface::TYPE_FEATURE);
+        $this->assertEquals("FeatureCollection", GeoJsonInterface::TYPE_FEATURECOLLECTION);
 
         $obj = new TestGeoJson("type");
 

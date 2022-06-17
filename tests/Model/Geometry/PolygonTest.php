@@ -12,7 +12,7 @@
 namespace WBW\Library\GeoJson\Tests\Model\Geometry;
 
 use JsonSerializable;
-use WBW\Library\GeoJson\Model\GeoJson;
+use WBW\Library\GeoJson\Model\GeoJsonInterface;
 use WBW\Library\GeoJson\Model\Geometry\Point;
 use WBW\Library\GeoJson\Model\Geometry\Polygon;
 use WBW\Library\GeoJson\Tests\AbstractTestCase;
@@ -67,7 +67,7 @@ class PolygonTest extends AbstractTestCase {
         $obj = new Polygon();
 
         $this->assertInstanceOf(JsonSerializable::class, $obj);
-        $this->assertEquals(GeoJson::TYPE_POLYGON, $obj->getType());
+        $this->assertEquals(GeoJsonInterface::TYPE_POLYGON, $obj->getType());
         $this->assertEquals([], $obj->getExteriorRings());
         $this->assertEquals([], $obj->getInteriorRings());
     }

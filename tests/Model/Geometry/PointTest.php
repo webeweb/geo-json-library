@@ -12,7 +12,7 @@
 namespace WBW\Library\GeoJson\Tests\Model\Geometry;
 
 use JsonSerializable;
-use WBW\Library\GeoJson\Model\GeoJson;
+use WBW\Library\GeoJson\Model\GeoJsonInterface;
 use WBW\Library\GeoJson\Model\Geometry\Point;
 use WBW\Library\GeoJson\Model\Position;
 use WBW\Library\GeoJson\Tests\AbstractTestCase;
@@ -49,7 +49,7 @@ class PointTest extends AbstractTestCase {
         $obj = new Point();
 
         $this->assertInstanceOf(JsonSerializable::class, $obj);
-        $this->assertEquals(GeoJson::TYPE_POINT, $obj->getType());
+        $this->assertEquals(GeoJsonInterface::TYPE_POINT, $obj->getType());
         $this->assertNull($obj->getPosition());
     }
 }

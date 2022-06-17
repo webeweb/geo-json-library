@@ -12,7 +12,7 @@
 namespace WBW\Library\GeoJson\Tests\Model;
 
 use JsonSerializable;
-use WBW\Library\GeoJson\Model\GeoJson;
+use WBW\Library\GeoJson\Model\GeoJsonInterface;
 use WBW\Library\GeoJson\Model\GeometryCollection;
 use WBW\Library\GeoJson\Tests\AbstractTestCase;
 
@@ -50,7 +50,7 @@ class GeometryCollectionTest extends AbstractTestCase {
         $obj = new GeometryCollection();
 
         $this->assertInstanceOf(JsonSerializable::class, $obj);
-        $this->assertEquals(GeoJson::TYPE_GEOMETRYCOLLECTION, $obj->getType());
+        $this->assertEquals(GeoJsonInterface::TYPE_GEOMETRYCOLLECTION, $obj->getType());
         $this->assertEquals([], $obj->getGeometries());
     }
 }
