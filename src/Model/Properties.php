@@ -85,5 +85,4 @@ class Properties implements JsonSerializable {
         $this->properties = $properties;
         return $this;
     }
-
 }

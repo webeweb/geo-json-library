@@ -73,5 +73,4 @@ class BoundingBox implements JsonSerializable {
         $this->values = $values;
         return $this;
     }
-
 }
