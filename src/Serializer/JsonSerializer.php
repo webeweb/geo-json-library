@@ -50,6 +50,7 @@ class JsonSerializer {
      * @return array Returns the serialized feature.
      */
     public static function serializeFeature(Feature $model): array {
+
         return [
             "type"       => $model->getType(),
             "bbox"       => JsonSerializerHelper::jsonSerializeModel($model->getBoundingBox()),
@@ -82,6 +83,7 @@ class JsonSerializer {
      * @return array Returns the serialized geometry collection.
      */
     public static function serializeGeometryCollection(GeometryCollection $model): array {
+
         return [
             "type"       => $model->getType(),
             "geometries" => JsonSerializerHelper::jsonSerializeArray($model->getGeometries()),
@@ -95,6 +97,7 @@ class JsonSerializer {
      * @return array Returns the serialized line string.
      */
     public static function serializeLineString(LineString $model): array {
+
         return [
             "type"        => $model->getType(),
             "coordinates" => JsonSerializerHelper::jsonSerializeArray($model->getPoints()),
@@ -108,6 +111,7 @@ class JsonSerializer {
      * @return array Returns the serialized multi line string.
      */
     public static function serializeMultiLineString(MultiLineString $model): array {
+
         return [
             "type"        => $model->getType(),
             "coordinates" => JsonSerializerHelper::jsonSerializeArray($model->getLineStrings()),
@@ -121,6 +125,7 @@ class JsonSerializer {
      * @return array Returns the serialized multi point.
      */
     public static function serializeMultiPoint(MultiPoint $model): array {
+
         return [
             "type"        => $model->getType(),
             "coordinates" => JsonSerializerHelper::jsonSerializeArray($model->getPoints()),
@@ -134,6 +139,7 @@ class JsonSerializer {
      * @return array Returns the serialized multi polygon.
      */
     public static function serializeMultiPolygon(MultiPolygon $model): array {
+
         return [
             "type"        => $model->getType(),
             "coordinates" => JsonSerializerHelper::jsonSerializeArray($model->getPolygons()),
@@ -147,6 +153,7 @@ class JsonSerializer {
      * @return array Returns the serialized point.
      */
     public static function serializePoint(Point $model): array {
+
         return [
             "type"        => $model->getType(),
             "coordinates" => JsonSerializerHelper::jsonSerializeModel($model->getPosition()),
@@ -160,6 +167,7 @@ class JsonSerializer {
      * @return array Returns the serialized polygon.
      */
     public static function serializePolygon(Polygon $model): array {
+
         return [
             "type"        => $model->getType(),
             "coordinates" => [
@@ -176,6 +184,7 @@ class JsonSerializer {
      * @return array Returns the serialized position.
      */
     public static function serializePosition(Position $model): array {
+
         return [
             $model->getLongitude(),
             $model->getLatitude(),

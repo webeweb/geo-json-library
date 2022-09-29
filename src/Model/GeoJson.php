@@ -42,6 +42,7 @@ abstract class GeoJson implements JsonSerializable, GeoJsonInterface {
      * @return string[] Returns the types.
      */
     public static function enumTypes(): array {
+
         return [
             self::TYPE_POINT,
             self::TYPE_MULTIPOINT,
