@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.4.0](https://github.com/webeweb/geo-json-library/tree/v1.4.0) (2022-12-20)
+
+- Add PHP 8.2 support
+
 ### [1.3.1](https://github.com/webeweb/geo-json-library/tree/v1.3.1) (2022-06-17)
 
 - Improve code quality
