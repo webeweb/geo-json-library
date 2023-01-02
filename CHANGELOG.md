@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Update LICENSE
+
 ### [1.4.0](https://github.com/webeweb/geo-json-library/tree/v1.4.0) (2022-12-20)
 
 - Add PHP 8.2 support
