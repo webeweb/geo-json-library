@@ -27,6 +27,7 @@ use WBW\Library\GeoJson\Model\GeometryCollection;
 use WBW\Library\GeoJson\Model\Position;
 use WBW\Library\GeoJson\Model\Properties;
 use WBW\Library\Types\Helper\ArrayHelper;
+use WBW\Library\Serializer\SerializerKeys as BaseSerializerKeys;
 
 /**
  * JSON deserializer.
@@ -64,14 +65,14 @@ class JsonDeserializer {
      */
     protected static function deserializeFeature(array $data): ?Feature {
 
-        if (GeoJsonInterface::TYPE_FEATURE !== ArrayHelper::get($data, "type")) {
+        if (GeoJsonInterface::TYPE_FEATURE !== ArrayHelper::get($data, BaseSerializerKeys::TYPE)) {
             return null;
         }
 
         $model = new Feature();
-        $model->setBoundingBox(static::deserializeBoundingBox(ArrayHelper::get($data, "bbox", [])));
-        $model->setGeometry(static::deserializeGeometry(ArrayHelper::get($data, "geometry", [])));
-        $model->setProperties(static::deserializeProperties(ArrayHelper::get($data, "properties", [])));
+        $model->setBoundingBox(static::deserializeBoundingBox(ArrayHelper::get($data, SerializerKeys::BBOX, [])));
+        $model->setGeometry(static::deserializeGeometry(ArrayHelper::get($data, SerializerKeys::GEOMETRY, [])));
+        $model->setProperties(static::deserializeProperties(ArrayHelper::get($data, SerializerKeys::PROPERTIES, [])));
 
         return $model;
     }
@@ -85,14 +86,14 @@ class JsonDeserializer {
     public static function deserializeFeatureCollection(array $data): FeatureCollection {
 
         $model = new FeatureCollection();
-        $model->setBoundingBox(static::deserializeBoundingBox(ArrayHelper::get($data, "bbox", [])));
+        $model->setBoundingBox(static::deserializeBoundingBox(ArrayHelper::get($data, SerializerKeys::BBOX, [])));
 
-        foreach (ArrayHelper::get($data, "features", []) as $current) {
+        foreach (ArrayHelper::get($data, SerializerKeys::FEATURES, []) as $current) {
             $model->addFeature(static::deserializeFeature($current));
         }
 
         foreach ($data as $k => $v) {
-            if (true === in_array($k, ["type", "bbox", "features"])) {
+            if (true === in_array($k, [BaseSerializerKeys::TYPE, SerializerKeys::BBOX, SerializerKeys::FEATURES])) {
                 continue;
             }
             $model->addForeignMember($k, $v);
@@ -109,13 +110,13 @@ class JsonDeserializer {
      */
     protected static function deserializeGeometry(array $data): ?Geometry {
 
-        $type = ArrayHelper::get($data, "type");
+        $type = ArrayHelper::get($data, BaseSerializerKeys::TYPE);
         if (false === in_array($type, GeoJson::enumTypes())) {
             return null;
         }
 
         $fct = __NAMESPACE__ . "\\JsonDeserializer::deserialize$type";
-        $key = GeoJsonInterface::TYPE_GEOMETRYCOLLECTION === $type ? "geometries" : "coordinates";
+        $key = GeoJsonInterface::TYPE_GEOMETRYCOLLECTION === $type ? SerializerKeys::GEOMETRIES : SerializerKeys::COORDINATES;
 
         $arg = ArrayHelper::get($data, $key, []);
         if (0 === count($arg)) {
