@@ -26,8 +26,8 @@ use WBW\Library\GeoJson\Model\Geometry\Polygon;
 use WBW\Library\GeoJson\Model\GeometryCollection;
 use WBW\Library\GeoJson\Model\Position;
 use WBW\Library\GeoJson\Model\Properties;
-use WBW\Library\Types\Helper\ArrayHelper;
 use WBW\Library\Serializer\SerializerKeys as BaseSerializerKeys;
+use WBW\Library\Types\Helper\ArrayHelper;
 
 /**
  * JSON deserializer.
