@@ -50,7 +50,7 @@ class GeometryCollectionTest extends AbstractTestCase {
         $obj = new GeometryCollection();
 
         $this->assertInstanceOf(JsonSerializable::class, $obj);
-        $this->assertEquals(GeoJsonInterface::TYPE_GEOMETRYCOLLECTION, $obj->getType());
+        $this->assertEquals(GeoJsonInterface::TYPE_GEOMETRY_COLLECTION, $obj->getType());
         $this->assertEquals([], $obj->getGeometries());
     }
 }

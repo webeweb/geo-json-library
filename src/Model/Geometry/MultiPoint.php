@@ -26,7 +26,7 @@ class MultiPoint extends Geometry {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::TYPE_MULTIPOINT);
+        parent::__construct(self::TYPE_MULTI_POINT);
     }
 
     /**

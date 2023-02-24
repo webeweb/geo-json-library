@@ -26,7 +26,7 @@ class MultiLineString extends Geometry {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(self::TYPE_MULTILINESTRING);
+        parent::__construct(self::TYPE_MULTI_LINE_STRING);
     }
 
     /**

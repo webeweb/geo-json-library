@@ -31,49 +31,49 @@ interface GeoJsonInterface {
      *
      * @var string
      */
-    const TYPE_FEATURECOLLECTION = "FeatureCollection";
+    const TYPE_FEATURE_COLLECTION = "FeatureCollection";
 
     /**
      * Type "geometry collection".
      *
      * @var string
      */
-    const TYPE_GEOMETRYCOLLECTION = "GeometryCollection";
+    const TYPE_GEOMETRY_COLLECTION = "GeometryCollection";
 
     /**
      * Type "line string".
      *
      * @var string
      */
-    const TYPE_LINESTRING = "LineString";
+    const TYPE_LINE_STRING = "LineString";
 
     /**
      * Type "multi line".
      *
      * @var string
      */
-    const TYPE_MULTILINE = "MultiLine";
+    const TYPE_MULTI_LINE = "MultiLine";
 
     /**
      * Type "multi line string".
      *
      * @var string
      */
-    const TYPE_MULTILINESTRING = "MultiLineString";
+    const TYPE_MULTI_LINE_STRING = "MultiLineString";
 
     /**
      * Type "multi point".
      *
      * @var string
      */
-    const TYPE_MULTIPOINT = "MultiPoint";
+    const TYPE_MULTI_POINT = "MultiPoint";
 
     /**
      * Type "multi polygon".
      *
      * @var string
      */
-    const TYPE_MULTIPOLYGON = "MultiPolygon";
+    const TYPE_MULTI_POLYGON = "MultiPolygon";
 
     /**
      * Type "point".

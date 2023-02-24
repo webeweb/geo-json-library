@@ -116,7 +116,7 @@ class JsonDeserializer {
         }
 
         $fct = __NAMESPACE__ . "\\JsonDeserializer::deserialize$type";
-        $key = GeoJsonInterface::TYPE_GEOMETRYCOLLECTION === $type ? SerializerKeys::GEOMETRIES : SerializerKeys::COORDINATES;
+        $key = GeoJsonInterface::TYPE_GEOMETRY_COLLECTION === $type ? SerializerKeys::GEOMETRIES : SerializerKeys::COORDINATES;
 
         $arg = ArrayHelper::get($data, $key, []);
         if (0 === count($arg)) {

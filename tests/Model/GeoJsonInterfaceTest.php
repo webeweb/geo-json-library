@@ -30,14 +30,14 @@ class GeoJsonInterfaceTest extends AbstractTestCase {
     public function test__construct(): void {
 
         $this->assertEquals("Point", GeoJsonInterface::TYPE_POINT);
-        $this->assertEquals("MultiPoint", GeoJsonInterface::TYPE_MULTIPOINT);
-        $this->assertEquals("LineString", GeoJsonInterface::TYPE_LINESTRING);
-        $this->assertEquals("MultiLineString", GeoJsonInterface::TYPE_MULTILINESTRING);
+        $this->assertEquals("MultiPoint", GeoJsonInterface::TYPE_MULTI_POINT);
+        $this->assertEquals("LineString", GeoJsonInterface::TYPE_LINE_STRING);
+        $this->assertEquals("MultiLineString", GeoJsonInterface::TYPE_MULTI_LINE_STRING);
         $this->assertEquals("Polygon", GeoJsonInterface::TYPE_POLYGON);
-        $this->assertEquals("MultiPolygon", GeoJsonInterface::TYPE_MULTIPOLYGON);
-        $this->assertEquals("GeometryCollection", GeoJsonInterface::TYPE_GEOMETRYCOLLECTION);
+        $this->assertEquals("MultiPolygon", GeoJsonInterface::TYPE_MULTI_POLYGON);
+        $this->assertEquals("GeometryCollection", GeoJsonInterface::TYPE_GEOMETRY_COLLECTION);
 
         $this->assertEquals("Feature", GeoJsonInterface::TYPE_FEATURE);
-        $this->assertEquals("FeatureCollection", GeoJsonInterface::TYPE_FEATURECOLLECTION);
+        $this->assertEquals("FeatureCollection", GeoJsonInterface::TYPE_FEATURE_COLLECTION);
     }
 }

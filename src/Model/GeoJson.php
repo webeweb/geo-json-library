@@ -45,12 +45,12 @@ abstract class GeoJson implements JsonSerializable, GeoJsonInterface {
 
         return [
             self::TYPE_POINT,
-            self::TYPE_MULTIPOINT,
-            self::TYPE_LINESTRING,
-            self::TYPE_MULTILINESTRING,
+            self::TYPE_MULTI_POINT,
+            self::TYPE_LINE_STRING,
+            self::TYPE_MULTI_LINE_STRING,
             self::TYPE_POLYGON,
-            self::TYPE_MULTIPOLYGON,
-            self::TYPE_GEOMETRYCOLLECTION,
+            self::TYPE_MULTI_POLYGON,
+            self::TYPE_GEOMETRY_COLLECTION,
         ];
     }
 }

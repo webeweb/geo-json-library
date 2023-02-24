@@ -67,7 +67,7 @@ class FeatureCollectionTest extends AbstractTestCase {
         $obj = new FeatureCollection();
 
         $this->assertInstanceOf(JsonSerializable::class, $obj);
-        $this->assertEquals(GeoJsonInterface::TYPE_FEATURECOLLECTION, $obj->getType());
+        $this->assertEquals(GeoJsonInterface::TYPE_FEATURE_COLLECTION, $obj->getType());
         $this->assertNull($obj->getBoundingBox());
         $this->assertEquals([], $obj->getFeatures());
         $this->assertEquals([], $obj->getForeignMembers());

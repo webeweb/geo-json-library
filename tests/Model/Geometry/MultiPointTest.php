@@ -51,7 +51,7 @@ class MultiPointTest extends AbstractTestCase {
         $obj = new MultiPoint();
 
         $this->assertInstanceOf(JsonSerializable::class, $obj);
-        $this->assertEquals(GeoJsonInterface::TYPE_MULTIPOINT, $obj->getType());
+        $this->assertEquals(GeoJsonInterface::TYPE_MULTI_POINT, $obj->getType());
         $this->assertEquals([], $obj->getPoints());
     }
 }
