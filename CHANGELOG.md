@@ -1,8 +1,11 @@
 CHANGELOG
 =========
 
-### master
+### [1.5.0](https://github.com/webeweb/geo-json-library/tree/v1.5.0) (2023-02-24)
 
+- Add Serializer keys
+- Improve code quality
+- Improve Geo JSON constants
 - Update LICENSE
 
 ### [1.4.0](https://github.com/webeweb/geo-json-library/tree/v1.4.0) (2022-12-20)
