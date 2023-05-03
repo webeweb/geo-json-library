@@ -26,7 +26,7 @@ use WBW\Library\GeoJson\Tests\AbstractTestCase;
 class FeatureCollectionTest extends AbstractTestCase {
 
     /**
-     * Tests addFeature()
+     * Test addFeature()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class FeatureCollectionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests addForeignMember()
+     * Test addForeignMember()
      *
      * @return void
      */
@@ -58,7 +58,7 @@ class FeatureCollectionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

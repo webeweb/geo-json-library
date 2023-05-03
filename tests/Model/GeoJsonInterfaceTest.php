@@ -23,7 +23,7 @@ use WBW\Library\GeoJson\Tests\AbstractTestCase;
 class GeoJsonInterfaceTest extends AbstractTestCase {
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

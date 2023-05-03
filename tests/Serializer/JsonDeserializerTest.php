@@ -34,7 +34,7 @@ use WBW\Library\GeoJson\Tests\Fixtures\Serializer\TestJsonDeserializer;
 class JsonDeserializerTest extends AbstractTestCase {
 
     /**
-     * Tests deserializeBoundingBox()
+     * Test deserializeBoundingBox()
      *
      * @rteurn void
      */
@@ -54,7 +54,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeFeature()
+     * Test deserializeFeature()
      *
      * @rteurn void
      */
@@ -72,7 +72,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeFeatureCollection()
+     * Test deserializeFeatureCollection()
      *
      * @rteurn void
      */
@@ -93,7 +93,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeFeatureCollection()
+     * Test deserializeFeatureCollection()
      *
      * @rteurn void
      */
@@ -118,7 +118,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeGeometry()
+     * Test deserializeGeometry()
      *
      * @rteurn void
      */
@@ -133,7 +133,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeGeometryCollection()
+     * Test deserializeGeometryCollection()
      *
      * @return void
      */
@@ -155,7 +155,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeLineString()
+     * Test deserializeLineString()
      *
      * @return void
      */
@@ -178,7 +178,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeMultiLineString()
+     * Test deserializeMultiLineString()
      *
      * @return void
      */
@@ -209,7 +209,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeMultiPoint()
+     * Test deserializeMultiPoint()
      *
      * @return void
      */
@@ -232,7 +232,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeMultiPolygon()
+     * Test deserializeMultiPolygon()
      *
      * @return void
      */
@@ -306,7 +306,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializePoint()
+     * Test deserializePoint()
      *
      * @return void
      */
@@ -325,7 +325,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializePolygon()
+     * Test deserializePolygon()
      *
      * @return void
      */

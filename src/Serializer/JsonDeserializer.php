@@ -38,7 +38,7 @@ use WBW\Library\Types\Helper\ArrayHelper;
 class JsonDeserializer {
 
     /**
-     * Deserializes a bounding box.
+     * Deserialize a bounding box.
      *
      * @param array $data The data.
      * @return BoundingBox|null Returns the bounding box.
@@ -58,7 +58,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a feature.
+     * Deserialize a feature.
      *
      * @param array $data The data.
      * @return Feature|null Returns the feature.
@@ -103,7 +103,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a geometry.
+     * Deserialize a geometry.
      *
      * @param array $data The data.
      * @return Geometry|null Returns the geometry.
@@ -127,7 +127,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a geometry collection.
+     * Deserialize a geometry collection.
      *
      * @param array $data The data.
      * @return GeometryCollection Returns the geometry collection.
@@ -143,7 +143,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a line string.
+     * Deserialize a line string.
      *
      * @param array $data The data.
      * @return LineString|null Returns the line string.
@@ -159,7 +159,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a multi line string.
+     * Deserialize a multi line string.
      *
      * @param array $data The data.
      * @return MultiLineString Returns the multi line string.
@@ -175,7 +175,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a multi point.
+     * Deserialize a multi point.
      *
      * @param array $data The data.
      * @return MultiPoint|null Returns the multi point.
@@ -191,7 +191,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a multi polygon.
+     * Deserialize a multi polygon.
      *
      * @param array $data The data.
      * @return MultiPolygon Returns the multi polygon.
@@ -207,7 +207,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a point.
+     * Deserialize a point.
      *
      * @param array $data The data.
      * @return Point|null Returns the point.
@@ -221,7 +221,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a polygon.
+     * Deserialize a polygon.
      *
      * @param array $data The data.
      * @return Polygon|null Returns the polygon.
@@ -250,7 +250,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a position.
+     * Deserialize a position.
      *
      * @param array $data The data.
      * @return Position|null Returns the position.
@@ -271,7 +271,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a properties.
+     * Deserialize a properties.
      *
      * @param array $data The data.
      * @return Properties|null Returns the properties.

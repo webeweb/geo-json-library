@@ -26,7 +26,7 @@ use WBW\Library\GeoJson\Tests\Fixtures\Model\TestGeoJson;
 class GeoJsonTest extends AbstractTestCase {
 
     /**
-     * Tests enumTypes()
+     * Test enumTypes()
      *
      * @return void
      */
@@ -46,7 +46,7 @@ class GeoJsonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

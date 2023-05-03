@@ -37,7 +37,7 @@ abstract class GeoJson implements JsonSerializable, GeoJsonInterface {
     }
 
     /**
-     * Enumerates the types.
+     * Enumerate the types.
      *
      * @return string[] Returns the types.
      */

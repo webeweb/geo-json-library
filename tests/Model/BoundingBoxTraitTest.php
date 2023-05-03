@@ -24,7 +24,7 @@ use WBW\Library\GeoJson\Tests\Fixtures\Model\TestBoundingBoxTrait;
 class BoundingBoxTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setBoundingBox()
+     * Test setBoundingBox()
      *
      * @return void
      */

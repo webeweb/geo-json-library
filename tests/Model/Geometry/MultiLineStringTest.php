@@ -26,7 +26,7 @@ use WBW\Library\GeoJson\Tests\AbstractTestCase;
 class MultiLineStringTest extends AbstractTestCase {
 
     /**
-     * Tests addLineString()
+     * Test addLineString()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class MultiLineStringTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

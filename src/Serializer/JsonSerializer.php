@@ -35,7 +35,7 @@ use WBW\Library\Serializer\SerializerKeys as BaseSerializerKeys;
 class JsonSerializer {
 
     /**
-     * Serializes a bounding box.
+     * Serialize a bounding box.
      *
      * @param BoundingBox $model The bounding box.
      * @return array Returns the serialized bounding box.
@@ -45,7 +45,7 @@ class JsonSerializer {
     }
 
     /**
-     * Serializes a feature.
+     * Serialize a feature.
      *
      * @param Feature $model The feature.
      * @return array Returns the serialized feature.
@@ -61,7 +61,7 @@ class JsonSerializer {
     }
 
     /**
-     * Serializes a feature collection.
+     * Serialize a feature collection.
      *
      * @param FeatureCollection $model The feature collection.
      * @return array Returns the serialized feature collection.
@@ -78,7 +78,7 @@ class JsonSerializer {
     }
 
     /**
-     * Serializes a geometry collection.
+     * Serialize a geometry collection.
      *
      * @param GeometryCollection $model The geometry collection.
      * @return array Returns the serialized geometry collection.
@@ -92,7 +92,7 @@ class JsonSerializer {
     }
 
     /**
-     * Serializes a line string.
+     * Serialize a line string.
      *
      * @param LineString $model The line string.
      * @return array Returns the serialized line string.
@@ -106,7 +106,7 @@ class JsonSerializer {
     }
 
     /**
-     * Serializes a multi line string.
+     * Serialize a multi line string.
      *
      * @param MultiLineString $model The multi line string.
      * @return array Returns the serialized multi line string.
@@ -120,7 +120,7 @@ class JsonSerializer {
     }
 
     /**
-     * Serializes a multi point.
+     * Serialize a multi point.
      *
      * @param MultiPoint $model The multi point.
      * @return array Returns the serialized multi point.
@@ -134,7 +134,7 @@ class JsonSerializer {
     }
 
     /**
-     * Serializes a multi polygon.
+     * Serialize a multi polygon.
      *
      * @param MultiPolygon $model The multi polygon.
      * @return array Returns the serialized multi polygon.
@@ -148,7 +148,7 @@ class JsonSerializer {
     }
 
     /**
-     * Serializes a point.
+     * Serialize a point.
      *
      * @param Point $model The point.
      * @return array Returns the serialized point.
@@ -162,7 +162,7 @@ class JsonSerializer {
     }
 
     /**
-     * Serializes a polygon.
+     * Serialize a polygon.
      *
      * @param Polygon $model The polygon.
      * @return array Returns the serialized polygon.
@@ -179,7 +179,7 @@ class JsonSerializer {
     }
 
     /**
-     * Serializes a position.
+     * Serialize a position.
      *
      * @param Position $model The position.
      * @return array Returns the serialized position.
@@ -194,7 +194,7 @@ class JsonSerializer {
     }
 
     /**
-     * Serializes a properties.
+     * Serialize a properties.
      *
      * @param Properties $model The properties.
      * @return array Returns the serialized properties.

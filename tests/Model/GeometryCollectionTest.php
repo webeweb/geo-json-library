@@ -25,7 +25,7 @@ use WBW\Library\GeoJson\Tests\AbstractTestCase;
 class GeometryCollectionTest extends AbstractTestCase {
 
     /**
-     * Tests addGeometry()
+     * Test addGeometry()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class GeometryCollectionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

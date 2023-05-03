@@ -26,7 +26,7 @@ use WBW\Library\GeoJson\Tests\AbstractTestCase;
 class MultiPointTest extends AbstractTestCase {
 
     /**
-     * Tests addPoint()
+     * Test addPoint()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class MultiPointTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

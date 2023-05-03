@@ -34,7 +34,7 @@ use WBW\Library\GeoJson\Tests\AbstractTestCase;
 class JsonSerializerTest extends AbstractTestCase {
 
     /**
-     * Tests serializeBoundingBox()
+     * Test serializeBoundingBox()
      *
      * @return void
      */
@@ -50,7 +50,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests serializeFeature()
+     * Test serializeFeature()
      *
      * @return void
      */
@@ -68,7 +68,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests serializeFeatureCollection()
+     * Test serializeFeatureCollection()
      *
      * @return void
      */
@@ -89,7 +89,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests serializeGeometryCollection()
+     * Test serializeGeometryCollection()
      *
      * @return void
      */
@@ -105,7 +105,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests serializeLineString()
+     * Test serializeLineString()
      *
      * @return void
      */
@@ -121,7 +121,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests serializeMultiLineString()
+     * Test serializeMultiLineString()
      *
      * @return void
      */
@@ -137,7 +137,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests serializeMultiPoint()
+     * Test serializeMultiPoint()
      *
      * @return void
      */
@@ -153,7 +153,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests serializeMultiPolygon()
+     * Test serializeMultiPolygon()
      *
      * @return void
      */
@@ -169,7 +169,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests serializePoint()
+     * Test serializePoint()
      *
      * @return void
      */
@@ -185,7 +185,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests serializePolygon()
+     * Test serializePolygon()
      *
      * @return void
      */
@@ -201,7 +201,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests serializePosition()
+     * Test serializePosition()
      *
      * @return void
      */
@@ -216,7 +216,7 @@ class JsonSerializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests serializeProperties()
+     * Test serializeProperties()
      *
      * @return void
      */

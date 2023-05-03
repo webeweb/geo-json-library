@@ -24,7 +24,7 @@ use WBW\Library\GeoJson\Tests\AbstractTestCase;
 class PositionTest extends AbstractTestCase {
 
     /**
-     * Tests setAltitude()
+     * Test setAltitude()
      *
      * @return void
      */
@@ -37,7 +37,7 @@ class PositionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setLatitude()
+     * Test setLatitude()
      *
      * @return void
      */
@@ -50,7 +50,7 @@ class PositionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setLongitude()
+     * Test setLongitude()
      *
      * @return void
      */
@@ -63,7 +63,7 @@ class PositionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

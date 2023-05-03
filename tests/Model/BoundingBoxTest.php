@@ -24,7 +24,7 @@ use WBW\Library\GeoJson\Tests\AbstractTestCase;
 class BoundingBoxTest extends AbstractTestCase {
 
     /**
-     * Tests addValue()
+     * Test addValue()
      *
      * @return void
      */
@@ -37,7 +37,7 @@ class BoundingBoxTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */
