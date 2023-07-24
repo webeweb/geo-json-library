@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve PHPDoc
+
 ### [1.5.0](https://github.com/webeweb/geo-json-library/tree/v1.5.0) (2023-02-24)
 
 - Add Serializer keys
