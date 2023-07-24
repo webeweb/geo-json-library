@@ -49,7 +49,7 @@ class MultiPolygon extends Geometry {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeMultiPolygon($this);

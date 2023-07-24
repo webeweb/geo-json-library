@@ -31,7 +31,7 @@ class TestGeoJson extends GeoJson {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return [];

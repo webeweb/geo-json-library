@@ -57,7 +57,7 @@ class BoundingBox implements JsonSerializable {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeBoundingBox($this);

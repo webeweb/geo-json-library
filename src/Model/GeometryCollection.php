@@ -39,14 +39,14 @@ class GeometryCollection extends Geometry {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getGeometries(): array {
         return parent::getGeometries();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeGeometryCollection($this);

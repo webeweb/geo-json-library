@@ -49,7 +49,7 @@ class MultiLineString extends Geometry {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeMultiLineString($this);

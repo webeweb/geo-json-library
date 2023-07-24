@@ -49,7 +49,7 @@ class MultiPoint extends Geometry {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeMultiPoint($this);

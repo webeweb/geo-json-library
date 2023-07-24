@@ -69,7 +69,7 @@ class Properties implements JsonSerializable {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeProperties($this);

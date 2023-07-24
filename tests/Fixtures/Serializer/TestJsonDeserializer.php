@@ -32,70 +32,70 @@ use WBW\Library\GeoJson\Serializer\JsonDeserializer;
 class TestJsonDeserializer extends JsonDeserializer {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function deserializeBoundingBox(array $data): ?BoundingBox {
         return parent::deserializeBoundingBox($data);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function deserializeFeature(array $data): ?Feature {
         return parent::deserializeFeature($data);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function deserializeGeometry(array $data): ?Geometry {
         return parent::deserializeGeometry($data);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function deserializeGeometryCollection(array $data): GeometryCollection {
         return parent::deserializeGeometryCollection($data);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function deserializeLineString(array $data): LineString {
         return parent::deserializeLineString($data);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function deserializeMultiLineString(array $data): MultiLineString {
         return parent::deserializeMultiLineString($data);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function deserializeMultiPoint(array $data): MultiPoint {
         return parent::deserializeMultiPoint($data);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function deserializeMultiPolygon(array $data): MultiPolygon {
         return parent::deserializeMultiPolygon($data);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function deserializePoint(array $data): Point {
         return parent::deserializePoint($data);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public static function deserializePolygon(array $data): Polygon {
         return parent::deserializePolygon($data);
