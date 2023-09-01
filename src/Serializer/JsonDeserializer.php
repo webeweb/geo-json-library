@@ -146,9 +146,9 @@ class JsonDeserializer {
      * Deserialize a line string.
      *
      * @param array $data The data.
-     * @return LineString|null Returns the line string.
+     * @return LineString Returns the line string.
      */
-    protected static function deserializeLineString(array $data): ?LineString {
+    protected static function deserializeLineString(array $data): LineString {
 
         $model = new LineString();
         foreach ($data as $current) {
@@ -178,9 +178,9 @@ class JsonDeserializer {
      * Deserialize a multi point.
      *
      * @param array $data The data.
-     * @return MultiPoint|null Returns the multi point.
+     * @return MultiPoint Returns the multi point.
      */
-    protected static function deserializeMultiPoint(array $data): ?MultiPoint {
+    protected static function deserializeMultiPoint(array $data): MultiPoint {
 
         $model = new MultiPoint();
         foreach ($data[0] as $current) {
@@ -210,9 +210,9 @@ class JsonDeserializer {
      * Deserialize a point.
      *
      * @param array $data The data.
-     * @return Point|null Returns the point.
+     * @return Point Returns the point.
      */
-    protected static function deserializePoint(array $data): ?Point {
+    protected static function deserializePoint(array $data): Point {
 
         $model = new Point();
         $model->setPosition(static::deserializePosition($data));
