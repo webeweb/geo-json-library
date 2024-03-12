@@ -26,7 +26,7 @@ class Properties implements JsonSerializable {
     /**
      * Properties.
      *
-     * @var array
+     * @var array<string,mixed>
      */
     private $properties;
 
@@ -52,7 +52,7 @@ class Properties implements JsonSerializable {
     /**
      * Get the properties.
      *
-     * @return array Returns the properties.
+     * @return array<string,mixed> Returns the properties.
      */
     public function getProperties(): array {
         return $this->properties;
@@ -70,6 +70,7 @@ class Properties implements JsonSerializable {
 
     /**
      * {@inheritDoc}
+     * @return array<string,mixed> Returns this serialized instance.
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeProperties($this);
@@ -78,7 +79,7 @@ class Properties implements JsonSerializable {
     /**
      * Set the properties.
      *
-     * @param array $properties The properties.
+     * @param array<string,mixed> $properties The properties.
      * @return Properties Returns this properties.
      */
     protected function setProperties(array $properties): Properties {
