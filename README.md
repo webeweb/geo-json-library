@@ -27,7 +27,7 @@ Open a command console, enter your project directory and execute the following
 command to download the latest stable version of this package:
 
 ```bash
-$ composer require webeweb/geo-json-library
+composer require webeweb/geo-json-library
 ```
 
 This command requires you to have Composer installed globally, as explained in
@@ -45,15 +45,15 @@ Open a command console and execute the following commands to download the latest
 stable version of this package:
 
 ```bash
-$ git clone https://github.com/webeweb/geo-json-library.git
-$ cd geo-json-library
-$ composer install
+git clone https://github.com/webeweb/geo-json-library.git
+cd geo-json-library
+composer install
 ```
 
 Once all required libraries are installed then do:
 
 ```bash
-$ vendor/bin/phpunit
+vendor/bin/phpunit
 ```
 
 ## License
