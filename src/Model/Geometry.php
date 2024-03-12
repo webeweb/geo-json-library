@@ -42,7 +42,7 @@ abstract class Geometry extends GeoJson {
      * Add a geometry.
      *
      * @param Geometry|null $geometry The geometry.
-     * @return Geometry Returns this geometry.
+     * @return $this Returns this geometry.
      */
     protected function addGeometry(?Geometry $geometry): Geometry {
 
