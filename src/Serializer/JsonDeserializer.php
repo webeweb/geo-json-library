@@ -40,7 +40,7 @@ class JsonDeserializer {
     /**
      * Deserialize a bounding box.
      *
-     * @param array $data The data.
+     * @param mixed[] $data The data.
      * @return BoundingBox|null Returns the bounding box.
      */
     protected static function deserializeBoundingBox(array $data): ?BoundingBox {
@@ -60,7 +60,7 @@ class JsonDeserializer {
     /**
      * Deserialize a feature.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Feature|null Returns the feature.
      */
     protected static function deserializeFeature(array $data): ?Feature {
@@ -80,7 +80,7 @@ class JsonDeserializer {
     /**
      * Deserialize a feature collection.
      *
-     * @param array $data The data.
+     * @param mixed[] $data The data.
      * @return FeatureCollection Returns the feature collection.
      */
     public static function deserializeFeatureCollection(array $data): FeatureCollection {
@@ -105,7 +105,7 @@ class JsonDeserializer {
     /**
      * Deserialize a geometry.
      *
-     * @param array $data The data.
+     * @param mixed[] $data The data.
      * @return Geometry|null Returns the geometry.
      */
     protected static function deserializeGeometry(array $data): ?Geometry {
@@ -129,7 +129,7 @@ class JsonDeserializer {
     /**
      * Deserialize a geometry collection.
      *
-     * @param array $data The data.
+     * @param mixed[] $data The data.
      * @return GeometryCollection Returns the geometry collection.
      */
     protected static function deserializeGeometryCollection(array $data): GeometryCollection {
@@ -145,7 +145,7 @@ class JsonDeserializer {
     /**
      * Deserialize a line string.
      *
-     * @param array $data The data.
+     * @param mixed[] $data The data.
      * @return LineString Returns the line string.
      */
     protected static function deserializeLineString(array $data): LineString {
@@ -161,7 +161,7 @@ class JsonDeserializer {
     /**
      * Deserialize a multi line string.
      *
-     * @param array $data The data.
+     * @param mixed[] $data The data.
      * @return MultiLineString Returns the multi line string.
      */
     protected static function deserializeMultiLineString(array $data): MultiLineString {
@@ -177,7 +177,7 @@ class JsonDeserializer {
     /**
      * Deserialize a multi point.
      *
-     * @param array $data The data.
+     * @param mixed[] $data The data.
      * @return MultiPoint Returns the multi point.
      */
     protected static function deserializeMultiPoint(array $data): MultiPoint {
@@ -193,7 +193,7 @@ class JsonDeserializer {
     /**
      * Deserialize a multi polygon.
      *
-     * @param array $data The data.
+     * @param mixed[] $data The data.
      * @return MultiPolygon Returns the multi polygon.
      */
     protected static function deserializeMultiPolygon(array $data): MultiPolygon {
@@ -209,7 +209,7 @@ class JsonDeserializer {
     /**
      * Deserialize a point.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Point Returns the point.
      */
     protected static function deserializePoint(array $data): Point {
@@ -223,7 +223,7 @@ class JsonDeserializer {
     /**
      * Deserialize a polygon.
      *
-     * @param array $data The data.
+     * @param mixed[] $data The data.
      * @return Polygon|null Returns the polygon.
      */
     protected static function deserializePolygon(array $data): ?Polygon {
@@ -252,7 +252,7 @@ class JsonDeserializer {
     /**
      * Deserialize a position.
      *
-     * @param array $data The data.
+     * @param float[] $data The data.
      * @return Position|null Returns the position.
      */
     protected static function deserializePosition(array $data): ?Position {
@@ -273,7 +273,7 @@ class JsonDeserializer {
     /**
      * Deserialize a properties.
      *
-     * @param array $data The data.
+     * @param mixed[] $data The data.
      * @return Properties|null Returns the properties.
      */
     protected static function deserializeProperties(array $data): ?Properties {
