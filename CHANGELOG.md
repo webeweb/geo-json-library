@@ -5,6 +5,7 @@ CHANGELOG
 
 - Improve code quality
 - Improve PHPDoc
+- Update dependencies
 
 ### [1.5.0](https://github.com/webeweb/geo-json-library/tree/v1.5.0) (2023-02-24)
 
