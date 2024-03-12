@@ -50,6 +50,7 @@ class MultiLineString extends Geometry {
 
     /**
      * {@inheritDoc}
+     * @return array<string,mixed> Returns this serialized instance.
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeMultiLineString($this);
