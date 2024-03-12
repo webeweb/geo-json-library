@@ -45,7 +45,11 @@ class MultiPolygon extends Geometry {
      * @return Polygon[] Returns the polygons.
      */
     public function getPolygons(): array {
-        return $this->getGeometries();
+
+        /** @var Polygon[] $geometries */
+        $geometries = $this->getGeometries();
+
+        return $geometries;
     }
 
     /**
