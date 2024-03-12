@@ -34,7 +34,7 @@ class FeatureCollection extends GeoJson {
     /**
      * Foreign members.
      *
-     * @var array
+     * @var array<string,mixed>
      */
     private $foreignMembers;
 
@@ -95,7 +95,7 @@ class FeatureCollection extends GeoJson {
     /**
      * Get the foreign members.
      *
-     * @return array Returns the foreign members.
+     * @return array<string,mixed> Returns the foreign members.
      */
     public function getForeignMembers(): array {
         return $this->foreignMembers;
@@ -103,6 +103,7 @@ class FeatureCollection extends GeoJson {
 
     /**
      * {@inheritDoc}
+     * @return array<string,mixed> Returns this serialized instance.
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeFeatureCollection($this);
@@ -122,7 +123,7 @@ class FeatureCollection extends GeoJson {
     /**
      * Set the foreign members.
      *
-     * @param array $foreignMembers The foreign members.
+     * @param array<string,mixed> $foreignMembers The foreign members.
      * @return FeatureCollection Returns this feature collection.
      */
     protected function setForeignMembers(array $foreignMembers): FeatureCollection {
