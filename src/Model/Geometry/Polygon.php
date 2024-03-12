@@ -69,7 +69,11 @@ class Polygon extends Geometry {
      * @return Point[] Returns the exterior rings.
      */
     public function getExteriorRings(): array {
-        return $this->getGeometries();
+
+        /** @var Point[] $geometries */
+        $geometries = $this->getGeometries();
+
+        return $geometries;
     }
 
     /**
