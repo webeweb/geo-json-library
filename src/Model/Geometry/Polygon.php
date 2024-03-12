@@ -55,9 +55,11 @@ class Polygon extends Geometry {
      * @return Polygon Returns this polygon.
      */
     public function addInteriorRing(?Point $interiorRing): Polygon {
+
         if (null !== $interiorRing) {
             $this->interiorRings[] = $interiorRing;
         }
+
         return $this;
     }
 
@@ -81,6 +83,7 @@ class Polygon extends Geometry {
 
     /**
      * {@inheritDoc}
+     * @return array<string,mixed> Returns this serialized instance.
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializePolygon($this);
