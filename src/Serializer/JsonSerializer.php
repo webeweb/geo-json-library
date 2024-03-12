@@ -38,7 +38,7 @@ class JsonSerializer {
      * Serialize a bounding box.
      *
      * @param BoundingBox $model The bounding box.
-     * @return array Returns the serialized bounding box.
+     * @return float[] Returns the serialized bounding box.
      */
     public static function serializeBoundingBox(BoundingBox $model): array {
         return $model->getValues();
@@ -48,7 +48,7 @@ class JsonSerializer {
      * Serialize a feature.
      *
      * @param Feature $model The feature.
-     * @return array Returns the serialized feature.
+     * @return array<string,mixed> Returns the serialized feature.
      */
     public static function serializeFeature(Feature $model): array {
 
@@ -64,7 +64,7 @@ class JsonSerializer {
      * Serialize a feature collection.
      *
      * @param FeatureCollection $model The feature collection.
-     * @return array Returns the serialized feature collection.
+     * @return array<string,mixed> Returns the serialized feature collection.
      */
     public static function serializeFeatureCollection(FeatureCollection $model): array {
 
@@ -81,7 +81,7 @@ class JsonSerializer {
      * Serialize a geometry collection.
      *
      * @param GeometryCollection $model The geometry collection.
-     * @return array Returns the serialized geometry collection.
+     * @return array<string,mixed> Returns the serialized geometry collection.
      */
     public static function serializeGeometryCollection(GeometryCollection $model): array {
 
@@ -95,7 +95,7 @@ class JsonSerializer {
      * Serialize a line string.
      *
      * @param LineString $model The line string.
-     * @return array Returns the serialized line string.
+     * @return array<string,mixed> Returns the serialized line string.
      */
     public static function serializeLineString(LineString $model): array {
 
@@ -109,7 +109,7 @@ class JsonSerializer {
      * Serialize a multi line string.
      *
      * @param MultiLineString $model The multi line string.
-     * @return array Returns the serialized multi line string.
+     * @return array<string,mixed> Returns the serialized multi line string.
      */
     public static function serializeMultiLineString(MultiLineString $model): array {
 
@@ -123,7 +123,7 @@ class JsonSerializer {
      * Serialize a multi point.
      *
      * @param MultiPoint $model The multi point.
-     * @return array Returns the serialized multi point.
+     * @return array<string,mixed> Returns the serialized multi point.
      */
     public static function serializeMultiPoint(MultiPoint $model): array {
 
@@ -137,7 +137,7 @@ class JsonSerializer {
      * Serialize a multi polygon.
      *
      * @param MultiPolygon $model The multi polygon.
-     * @return array Returns the serialized multi polygon.
+     * @return array<string,mixed> Returns the serialized multi polygon.
      */
     public static function serializeMultiPolygon(MultiPolygon $model): array {
 
@@ -151,7 +151,7 @@ class JsonSerializer {
      * Serialize a point.
      *
      * @param Point $model The point.
-     * @return array Returns the serialized point.
+     * @return array<string,mixed> Returns the serialized point.
      */
     public static function serializePoint(Point $model): array {
 
@@ -165,7 +165,7 @@ class JsonSerializer {
      * Serialize a polygon.
      *
      * @param Polygon $model The polygon.
-     * @return array Returns the serialized polygon.
+     * @return array<string,mixed> Returns the serialized polygon.
      */
     public static function serializePolygon(Polygon $model): array {
 
@@ -182,7 +182,7 @@ class JsonSerializer {
      * Serialize a position.
      *
      * @param Position $model The position.
-     * @return array Returns the serialized position.
+     * @return float[] Returns the serialized position.
      */
     public static function serializePosition(Position $model): array {
 
@@ -197,7 +197,7 @@ class JsonSerializer {
      * Serialize a properties.
      *
      * @param Properties $model The properties.
-     * @return array Returns the serialized properties.
+     * @return array<string,mixed> Returns the serialized properties.
      */
     public static function serializeProperties(Properties $model): array {
         return $model->getProperties();
