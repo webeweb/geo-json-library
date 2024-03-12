@@ -45,7 +45,11 @@ class LineString extends Geometry {
      * @return Point[] Returns the points.
      */
     public function getPoints(): array {
-        return $this->getGeometries();
+
+        /** @var Point[] $geometries */
+        $geometries = $this->getGeometries();
+
+        return $geometries;
     }
 
     /**
