@@ -70,10 +70,8 @@ class Polygon extends Geometry {
      */
     public function getExteriorRings(): array {
 
-        /** @var Point[] $geometries */
-        $geometries = $this->getGeometries();
-
-        return $geometries;
+        /** @var Point[] */
+        return $this->getGeometries();
     }
 
     /**
