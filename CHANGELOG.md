@@ -1,8 +1,9 @@
 CHANGELOG
 =========
 
-### master
+### [1.6.0](https://github.com/webeweb/geo-json-library/tree/v1.6.0) (2024-03-13)
 
+- Add PHP 8.3 support
 - Improve code quality
 - Improve PHPDoc
 - Update dependencies
