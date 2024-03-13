@@ -46,10 +46,8 @@ class MultiLineString extends Geometry {
      */
     public function getLineStrings(): array {
 
-        /** @var LineString[] $geometries */
-        $geometries = $this->getGeometries();
-
-        return $geometries;
+        /** @var LineString[] */
+        return $this->getGeometries();
     }
 
     /**
