@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.7.0](https://github.com/webeweb/geo-json-library/tree/v1.7.0) (2024-03-16)
+
+- Add declare(strict_types = 1)
+
 ### [1.6.0](https://github.com/webeweb/geo-json-library/tree/v1.6.0) (2024-03-13)
 
 - Add PHP 8.3 support
