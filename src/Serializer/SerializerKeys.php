@@ -26,40 +26,40 @@ class SerializerKeys {
      *
      * @var string
      */
-    const BBOX = "bbox";
+    public const BBOX = "bbox";
 
     /**
      * Serializer key "coordinates".
      *
      * @var string
      */
-    const COORDINATES = "coordinates";
+    public const COORDINATES = "coordinates";
 
     /**
      * Serializer key "features".
      *
      * @var string
      */
-    const FEATURES = "features";
+    public const FEATURES = "features";
 
     /**
      * Serializer key "geometries".
      *
      * @var string
      */
-    const GEOMETRIES = "geometries";
+    public const GEOMETRIES = "geometries";
 
     /**
      * Serializer key "geometry".
      *
      * @var string
      */
-    const GEOMETRY = "geometry";
+    public const GEOMETRY = "geometry";
 
     /**
      * Serializer key "properties".
      *
      * @var string
      */
-    const PROPERTIES = "properties";
+    public const PROPERTIES = "properties";
 }

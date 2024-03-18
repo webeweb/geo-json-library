@@ -26,68 +26,68 @@ interface GeoJsonInterface {
      *
      * @var string
      */
-    const TYPE_FEATURE = "Feature";
+    public const TYPE_FEATURE = "Feature";
 
     /**
      * Type "feature collection".
      *
      * @var string
      */
-    const TYPE_FEATURE_COLLECTION = "FeatureCollection";
+    public const TYPE_FEATURE_COLLECTION = "FeatureCollection";
 
     /**
      * Type "geometry collection".
      *
      * @var string
      */
-    const TYPE_GEOMETRY_COLLECTION = "GeometryCollection";
+    public const TYPE_GEOMETRY_COLLECTION = "GeometryCollection";
 
     /**
      * Type "line string".
      *
      * @var string
      */
-    const TYPE_LINE_STRING = "LineString";
+    public const TYPE_LINE_STRING = "LineString";
 
     /**
      * Type "multi line".
      *
      * @var string
      */
-    const TYPE_MULTI_LINE = "MultiLine";
+    public const TYPE_MULTI_LINE = "MultiLine";
 
     /**
      * Type "multi line string".
      *
      * @var string
      */
-    const TYPE_MULTI_LINE_STRING = "MultiLineString";
+    public const TYPE_MULTI_LINE_STRING = "MultiLineString";
 
     /**
      * Type "multi point".
      *
      * @var string
      */
-    const TYPE_MULTI_POINT = "MultiPoint";
+    public const TYPE_MULTI_POINT = "MultiPoint";
 
     /**
      * Type "multi polygon".
      *
      * @var string
      */
-    const TYPE_MULTI_POLYGON = "MultiPolygon";
+    public const TYPE_MULTI_POLYGON = "MultiPolygon";
 
     /**
      * Type "point".
      *
      * @var string
      */
-    const TYPE_POINT = "Point";
+    public const TYPE_POINT = "Point";
 
     /**
      * Type "polygon".
      *
      * @var string
      */
-    const TYPE_POLYGON = "Polygon";
+    public const TYPE_POLYGON = "Polygon";
 }
