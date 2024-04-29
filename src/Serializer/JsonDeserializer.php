@@ -13,6 +13,8 @@ declare(strict_types = 1);
 
 namespace WBW\Library\GeoJson\Serializer;
 
+use WBW\Library\Common\Helper\ArrayHelper;
+use WBW\Library\Common\Serializer\SerializerKeys as BaseSerializerKeys;
 use WBW\Library\GeoJson\Model\BoundingBox;
 use WBW\Library\GeoJson\Model\Feature;
 use WBW\Library\GeoJson\Model\FeatureCollection;
@@ -28,8 +30,6 @@ use WBW\Library\GeoJson\Model\Geometry\Polygon;
 use WBW\Library\GeoJson\Model\GeometryCollection;
 use WBW\Library\GeoJson\Model\Position;
 use WBW\Library\GeoJson\Model\Properties;
-use WBW\Library\Serializer\SerializerKeys as BaseSerializerKeys;
-use WBW\Library\Types\Helper\ArrayHelper;
 
 /**
  * JSON deserializer.

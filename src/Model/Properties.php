@@ -14,8 +14,8 @@ declare(strict_types = 1);
 namespace WBW\Library\GeoJson\Model;
 
 use JsonSerializable;
+use WBW\Library\Common\Helper\ArrayHelper;
 use WBW\Library\GeoJson\Serializer\JsonSerializer;
-use WBW\Library\Types\Helper\ArrayHelper;
 
 /**
  * Properties.

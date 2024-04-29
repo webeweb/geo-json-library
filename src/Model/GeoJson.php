@@ -14,7 +14,7 @@ declare(strict_types = 1);
 namespace WBW\Library\GeoJson\Model;
 
 use JsonSerializable;
-use WBW\Library\Traits\Strings\StringTypeTrait;
+use WBW\Library\Common\Traits\Strings\StringTypeTrait;
 
 /**
  * Geo JSON.
