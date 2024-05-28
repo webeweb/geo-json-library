@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.9.1](https://github.com/webeweb/geo-json-library/tree/v1.9.1) (2024-05-28)
+
+- Improve code quality
+
 ### [1.9.0](https://github.com/webeweb/geo-json-library/tree/v1.9.0) (2024-04-29)
 
 - Improve constants visibility
