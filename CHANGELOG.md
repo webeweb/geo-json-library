@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.9.2](https://github.com/webeweb/geo-json-library/tree/v1.9.2) (2024-06-27)
+
+- Fix Bounding box when value isn't a float
+
 ### [1.9.1](https://github.com/webeweb/geo-json-library/tree/v1.9.1) (2024-05-28)
 
 - Improve code quality
