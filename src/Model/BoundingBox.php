@@ -27,7 +27,7 @@ class BoundingBox implements JsonSerializable {
     /**
      * Values.
      *
-     * @var float[]
+     * @var mixed[]
      */
     private $values;
 
@@ -41,10 +41,10 @@ class BoundingBox implements JsonSerializable {
     /**
      * Add a value.
      *
-     * @param float $value The value.
+     * @param mixed $value The value.
      * @return BoundingBox Returns this bounding box.
      */
-    public function addValue(float $value): BoundingBox {
+    public function addValue($value): BoundingBox {
         $this->values[] = $value;
         return $this;
     }
@@ -52,7 +52,7 @@ class BoundingBox implements JsonSerializable {
     /**
      * Get the values.
      *
-     * @return float[] Returns the values.
+     * @return mixed[] Returns the values.
      */
     public function getValues(): array {
         return $this->values;
@@ -69,7 +69,7 @@ class BoundingBox implements JsonSerializable {
     /**
      * Set the values.
      *
-     * @param float[] $values The values.
+     * @param mixed[] $values The values.
      * @return BoundingBox Returns this bounding box.
      */
     protected function setValues(array $values): BoundingBox {
